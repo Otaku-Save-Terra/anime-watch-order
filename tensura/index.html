@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>That Time I Got Reincarnated as a Slime Watch Order (Tensura) | Chronological & Release Order</title>
+    <meta name="description" content="Complete watch order for That Time I Got Reincarnated as a Slime (Tensura). Follow chronological order, release order, and recommended viewing for all seasons, OVAs, and movies.">
+    <link rel="icon" href="../assets/images/v1.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="logo">
+                    <h1>AniWatch Order</h1>
+                </div>
+
+                <nav class="nav">
+                    <button class="nav__link" data-page="home">Home</button>
+                    <button class="nav__link" data-page="rankings">Browse</button>
+                    <button class="nav__link" data-page="search">About</button>
+                    <button class="nav__link" data-page="search">FAQ</button>
+                </nav>
+
+                <div class="header__actions">
+                    <div class="search-container">
+                        <input type="text" id="searchInput" class="search-input" placeholder="Search anime...">
+                        <button id="searchButton" class="search-button">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                        </button>
+                        <div id="searchSuggestions" class="search-suggestions hidden"></div>
+                    </div>
+
+                    <button id="themeToggle" class="theme-toggle">
+                        <i class="theme-icon theme-icon--light fa-solid fa-sun" aria-hidden="true"></i>
+                        <i class="theme-icon theme-icon--dark fa-solid fa-moon hidden" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <br>
+
+    <!-- Main Content -->
+    <main class="main" data-anime-guid="tensura">
+        <div class="container">
+            <!-- Series Header -->
+            <section class="watch-order-header">
+                <div class="watch-order-header__banner" id="seriesBanner"></div>
+                <div class="watch-order-header__info">
+                    <div class="watch-order-header__cover" id="seriesCover"></div>
+                    <div class="watch-order-header__meta">
+                        <h1 class="watch-order-header__title" id="seriesTitle"></h1>
+                        <p class="watch-order-header__subtitle" id="seriesSubtitle"></p>
+                        <div class="watch-order-header__genres" id="seriesGenres"></div>
+                        <p class="watch-order-header__seo">Looking for the correct watch order for That Time I Got Reincarnated as a Slime (Tensura)? This guide covers the chronological order, release order, and recommended viewing order for all anime seasons, OVAs, and movies.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Order Tabs -->
+            <section id="homePage" class="page active">
+                <div class="watch-order-tabs">
+                    <button class="btn btn--outline active" data-order-tab="recommended">Recommended</button>
+                    <button class="btn btn--outline" data-order-tab="chronological">Chronological</button>
+                    <button class="btn btn--outline" data-order-tab="release">Release Order</button>
+                </div>
+
+                <div id="watchOrderContent" class="watch-order-content">
+                    <!-- Order entries rendered by app.js -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay hidden">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h4>AniWatch Order</h4>
+                    <p>An anime watch order site built with vanilla JS, HTML, CSS. Features dark/light themes, responsive design, infinite scroll.</p>
+                </div>
+                <div class="footer__section">
+                    <h4>Links</h4>
+                    <ul>
+                        <li><a href="https://github.com/Otaku-Save-Terra/anime-watch-order" target="_blank">About</a></li>
+                        <li><a href="" target="_blank">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="" target="_blank">Reddit</a></li>
+                        <li><a href="https://github.com/Otaku-Save-Terra/anime-watch-order" target="_blank">Github</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>Copyright &copy; 2026 Otaku-Save-Terra. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="..\app.js"></script>
+</body>
+</html>

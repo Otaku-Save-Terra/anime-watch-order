@@ -1,0 +1,35 @@
+# Visual Studio files
+.vs/
+*.slnx.sqlite
+*.slnx.sqlite-*
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.sln
+*.csproj
+*.vscode/
+
+# Copilot cache
+.copilot/
+
+# Windows thumbnail cache
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Node modules (if you add npm later)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Build outputs
+dist/
+build/

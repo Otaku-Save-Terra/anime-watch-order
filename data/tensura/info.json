@@ -1,0 +1,16 @@
+{
+  "guid": "tensura",
+  "title": {
+    "main": "That Time I Got Reincarnated as a Slime",
+    "alt": [ "転生したらスライムだった件", "Tensei Shitara Slime Datta Ken", "Tensura" ]
+  },
+  "studio": [ "8-bit", "Funimation", "Lantis", "Bandai Namco Pictures", "MAPPA" ],
+  "description": "Lonely thirty-seven-year-old Satoru Mikami is stuck in a dead-end job, unhappy with his mundane life, but after dying at the hands of a robber, he awakens to a fresh start in a fantasy realm...as a slime monster! As he acclimates to his goopy new existence, his exploits with the other monsters set off a chain of events that will change his new world forever! (Source: Yen Press)",
+  "season": "FALL",
+  "year": 2018,
+  "banner": "/images/tensura-banner.jpg",
+  "thumbnail": "/images/tensura.jpg",
+  "mal": "https://myanimelist.net/anime/37430/Tensei_shitara_Slime_Datta_Ken",
+  "genre": [ "Adventure", "Fantasy" ],
+  "status": "Ongoing"
+}

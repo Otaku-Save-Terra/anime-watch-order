@@ -1,0 +1,327 @@
+{
+    "guid": "tensura",
+    "orders": {
+      "recommended": [
+        {
+          "title": "That Time I Got Reincarnated as a Slime (Season 1)",
+          "tag": [ "MAIN" ],
+          "start": {
+            "episode": 1,
+            "time": null
+          },
+          "end": {
+            "episode": 17,
+            "time": "12:20"
+          },
+          "remarks": "Stop when Falmuth Kingdom is introduced."
+        },
+        {
+          "title": "That Time I Got Reincarnated as a Slime (OAD)",
+          "tag": [ "OAD" ],
+          "start": {
+            "episode": 1,
+            "time": null
+          },
+          "end": {
+            "episode": 2,
+            "time": null
+          },
+          "remarks": null
+        },
+        {
+          "title": "The Slime Diaries",
+          "tag": [ "Spin-Off" ],
+          "start": {
+            "episode": 1,
+            "time": null
+          },
+          "end": {
+            "episode": 9,
+            "time": "13:35"
+          },
+          "remarks": "Right when Eren and the adventures met with Youm party in the forest."
+        },
+        {
+          "title": "That Time I Got Reincarnated as a Slime (Season 1)",
+          "tag": [ "MAIN" ],
+          "start": {
+            "episode": 17,
+            "time": null
+          },
+          "end": null,
+          "remarks": null
+        },
+        {
+          "title": "The Slime Diaries",
+          "tag": [ "Spin-Off" ],
+          "start": {
+            "episode": 9,
+            "time": null
+          },
+          "end": {
+            "episode": 12,
+            "time": null
+          },
+          "remarks": null
+        },
+        {
+          "title": "That Time I Got Reincarnated as a Slime (Season 1)",
+          "tag": [ "MAIN" ],
+          "start": {
+            "episode": 18,
+            "time": null
+          },
+          "end": {
+            "episode": 23,
+            "time": "12:30"
+          },
+          "remarks": "Right when Rimuru create the golem for Ramiris."
+        },
+        {
+          "title": "Sukuwareru Ramiris",
+          "tag": [ "Blu-ray" ],
+          "start": {
+            "episode": 1,
+            "time": null
+          },
+          "end": {
+            "episode": 2,
+            "time": null
+          },
+          "remarks": null
+        },
+        {
+          "title": "That Time I Got Reincarnated as a Slime (Season 1)",
+          "tag": [ "MAIN" ],
+          "start": {
+            "episode": 23,
+            "time": null
+          },
+          "end": {
+            "episode": null,
+            "time": "19:45"
+          },
+          "remarks": "Right before Rimuru left the academy."
+        },
+        {
+          "title": "That Time I Got Reincarnated as a Slime (Season 1) - Black and Mask",
+          "tag": [ "MAIN" ],
+          "start": {
+            "episode": 24,
+            "time": null
+          },
+          "end": null,
+          "remarks": null
+        },
+        {
+          "title": "That Time I Got Reincarnated as a Slime (OAD)",
+          "tag": [ "OAD" ],
+          "start": {
+            "episode": 3,
+            "time": null
+          },
+          "end": {
+            "episode": 5,
+            "time": null
+          },
+          "remarks": null
+        },
+        {
+          "title": "That Time I Got Reincarnated as a Slime (Season 2)",
+          "tag": [ "MAIN" ],
+          "start": {
+            "episode": 1,
+            "time": null
+          },
+          "end": {
+            "episode": 5,
+            "time": null
+          },
+          "remarks": null
+        },
+        {
+          "title": "That Time I Got Reincarnated as a Slime (ONA) Visions of Coleus",
+          "tag": [ "ONA" ],
+          "start": {
+            "episode": 1,
+            "time": null
+          },
+          "end": {
+            "episode": 3,
+            "time": "21:38"
+          },
+          "remarks": "Before they talk about a new Demon Lord is born."
+        },
+        {
+          "title": "That Time I Got Reincarnated as a Slime (Season 1)",
+          "tag": [ "MAIN" ],
+          "start": {
+            "episode": 23,
+            "time": null
+          },
+          "end": null,
+          "remarks": null
+        },
+        {
+          "title": "That Time I Got Reincarnated as a Slime (Season 1) Tales: Veldora's Journal",
+          "tag": [ "Special" ],
+          "start": {
+            "episode": 24.5,
+            "time": null
+          },
+          "end": null,
+          "remarks": null
+        },
+        {
+          "title": "That Time I Got Reincarnated as a Slime (Season 2) Digression: Hinata Sakaguchi",
+          "tag": [ "Special" ],
+          "start": {
+            "episode": 24.9,
+            "time": null
+          },
+          "end": null,
+          "remarks": null
+        },
+        {
+          "title": "That Time I Got Reincarnated as a Slime (Season 2)",
+          "tag": [ "MAIN" ],
+          "start": {
+            "episode": 6,
+            "time": null
+          },
+          "end": {
+            "episode": 12,
+            "time": null
+          },
+          "remarks": null
+        },
+        {
+          "title": "That Time I Got Reincarnated as a Slime (Season 2) Tales: Veldora's Journal 2",
+          "tag": [ "Special" ],
+          "start": {
+            "episode": 36.5,
+            "time": null
+          },
+          "end": null,
+          "remarks": null
+        },
+        {
+          "title": "That Time I Got Reincarnated as a Slime (Season 2)",
+          "tag": [ "MAIN" ],
+          "start": {
+            "episode": 13,
+            "time": null
+          },
+          "end": {
+            "episode": 24,
+            "time": null
+          },
+          "remarks": null
+        },
+        {
+          "title": "That Time I Got Reincarnated as a Slime (ONA) Visions of Coleus",
+          "tag": [ "ONA" ],
+          "start": {
+            "episode": 3,
+            "time": null
+          },
+          "end": null,
+          "remarks": null
+        },
+        {
+          "title": "That Time I Got Reincarnated as a Slime The Movie: Scarlet Bond",
+          "tag": [ "Movie" ],
+          "start": {
+            "episode": 1,
+            "time": null
+          },
+          "end": null,
+          "remarks": null
+        },
+        {
+          "title": "That Time I Got Reincarnated as a Slime The Movie: Scarlet Bond Specials",
+          "tag": [ "Blu-ray" ],
+          "start": {
+            "episode": 1,
+            "time": null
+          },
+          "end": {
+            "episode": 2,
+            "time": null
+          },
+          "remarks": null
+        },
+        {
+          "title": "That Time I Got Reincarnated as a Slime (Season 3) Extra story: Diabolo's Journal",
+          "tag": [ "Special" ],
+          "start": {
+            "episode": 48.5,
+            "time": null
+          },
+          "end": null,
+          "remarks": null
+        },
+        {
+          "title": "That Time I Got Reincarnated as a Slime (Season 3)",
+          "tag": [ "MAIN" ],
+          "start": {
+            "episode": 1,
+            "time": null
+          },
+          "end": {
+            "episode": 12,
+            "time": null
+          },
+          "remarks": null
+        },
+        {
+          "title": "That Time I Got Reincarnated as a Slime (Season 3) Digression: Luminous Memories",
+          "tag": [ "Special" ],
+          "start": {
+            "episode": 65.5,
+            "time": null
+          },
+          "end": null,
+          "remarks": null
+        },
+        {
+          "title": "That Time I Got Reincarnated as a Slime (Season 3)",
+          "tag": [ "MAIN" ],
+          "start": {
+            "episode": 13,
+            "time": null
+          },
+          "end": {
+            "episode": 24,
+            "time": null
+          },
+          "remarks": null
+        },
+        {
+          "title": "That Time I Got Reincarnated as a Slime The Movie 2: Tears of the Azure Sea",
+          "tag": [ "Movie" ],
+          "start": {
+            "episode": 1,
+            "time": null
+          },
+          "end": null,
+          "remarks": null
+        },
+        {
+          "title": "That Time I Got Reincarnated as a Slime (Season 4)",
+          "tag": [ "MAIN" ],
+          "start": {
+            "episode": 1,
+            "time": null
+          },
+          "end": {
+            "episode": 24,
+            "time": null
+          },
+          "remarks": null
+        }
+      ],
+      "chronological": [],
+      "release": []
+    }
+}

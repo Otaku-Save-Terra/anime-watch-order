@@ -419,6 +419,7 @@ pre code {
 
 .btn--primary:hover {
   background: var(--color-primary-hover);
+  color: var(--color-btn-primary-text);
 }
 
 .btn--primary:active {
@@ -819,15 +820,20 @@ select.form-control {
 }
 
 .search-button {
-  position: absolute;
-  right: var(--space-8);
-  background: none;
-  border: none;
-  color: var(--color-text-secondary);
-  cursor: pointer;
-  padding: var(--space-4);
-  border-radius: var(--radius-sm);
-  transition: color var(--duration-fast) var(--ease-standard);
+    position: absolute;
+    right: var(--space-8);
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    padding: var(--space-4);
+    border-radius: var(--radius-sm);
+    transition: color var(--duration-fast) var(--ease-standard);
 }
 
 .search-button:hover {
@@ -883,6 +889,11 @@ select.form-control {
 .theme-toggle:hover {
   background-color: var(--color-secondary);
   border-color: var(--color-primary);
+}
+
+.theme-icon {
+  font-size: 16px;
+  line-height: 1;
 }
 
 .theme-icon.hidden {
@@ -1158,8 +1169,8 @@ select.form-control {
 }
 
 .genre-tag {
-  background-color: var(--color-bg-2);
-  color: var(--color-text-secondary);
+  background-color: var(--color-bg-1);
+  color: var(--color-success);
   padding: var(--space-2) var(--space-6);
   border-radius: var(--radius-sm);
   font-size: var(--font-size-xs);
@@ -1359,6 +1370,7 @@ select.form-control {
   width: 100%;
   max-height: 90vh;
   overflow-y: auto;
+  overflow-x: hidden;
   box-shadow: var(--shadow-lg);
 }
 
@@ -1405,6 +1417,260 @@ select.form-control {
   margin-top: var(--space-24);
 }
 
+/* Watch Order Page */
+.watch-order-header {
+  position: relative;
+  margin-bottom: var(--space-32);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-card-border);
+}
+
+.watch-order-header__banner {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--color-secondary);
+  position: relative;
+}
+
+.watch-order-header__banner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent 40%, var(--color-surface));
+}
+
+.watch-order-header__info {
+  display: flex;
+  gap: var(--space-24);
+  padding: 0 var(--space-24) var(--space-24);
+  margin-top: -60px;
+  position: relative;
+  z-index: 1;
+}
+
+.watch-order-header__cover {
+  width: 120px;
+  height: 170px;
+  border-radius: var(--radius-base);
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 3px solid var(--color-surface);
+  box-shadow: var(--shadow-md);
+}
+
+.watch-order-header__cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.watch-order-header__meta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  padding-top: 68px;
+  min-width: 0;
+}
+
+.watch-order-header__title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+  margin: 0;
+}
+
+.watch-order-header__subtitle {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.watch-order-header__genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+}
+
+.watch-order-header__seo {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-normal);
+  margin: var(--space-8) 0 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.watch-order-tabs {
+  display: flex;
+  gap: var(--space-8);
+  margin-bottom: var(--space-24);
+  flex-wrap: wrap;
+}
+
+.watch-order-tabs .btn.active {
+  background-color: var(--color-primary);
+  color: var(--color-btn-primary-text);
+  border-color: var(--color-primary);
+}
+
+.watch-order-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.watch-order-entry {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-16);
+  padding: var(--space-16) var(--space-20);
+  background: linear-gradient(135deg, var(--color-surface) 62%, rgba(var(--color-teal-500-rgb), 0.06) 100%);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-lg);
+  transition: border-color var(--duration-normal) var(--ease-standard),
+              transform var(--duration-normal) var(--ease-standard),
+              box-shadow var(--duration-normal) var(--ease-standard);
+}
+
+.watch-order-entry:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.watch-order-entry__number {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  background-color: var(--color-primary);
+  color: var(--color-btn-primary-text);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+}
+
+.watch-order-entry__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.watch-order-entry__title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+  margin: 0 0 var(--space-6);
+}
+
+.watch-order-entry__episodes {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-primary);
+  margin: 0 0 var(--space-6);
+}
+
+.watch-order-entry__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+
+.watch-order-tag {
+  display: inline-block;
+  padding: var(--space-2) var(--space-8);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.watch-order-tag--main {
+  background-color: rgba(var(--color-red-500-rgb), 0.15);
+  color: var(--color-error);
+}
+
+.watch-order-tag--ova {
+  background-color: rgba(168, 85, 247, 0.15);
+  color: rgba(168, 85, 247, 1);
+}
+
+.watch-order-tag--oad {
+  background-color: rgba(236, 72, 153, 0.15);
+  color: rgba(236, 72, 153, 1);
+}
+
+.watch-order-tag--movie {
+  background-color: rgba(59, 130, 246, 0.15);
+  color: rgba(59, 130, 246, 1);
+}
+
+.watch-order-tag--special {
+  background-color: rgba(34, 197, 94, 0.15);
+  color: rgba(22, 163, 74, 1);
+}
+
+.watch-order-tag--ona {
+  background-color: rgba(6, 182, 212, 0.15);
+  color: rgba(6, 182, 212, 1);
+}
+
+.watch-order-tag--spinoff {
+  background-color: rgba(245, 158, 11, 0.15);
+  color: rgba(245, 158, 11, 1);
+}
+
+.watch-order-tag--bluray {
+  background-color: rgba(var(--color-slate-500-rgb), 0.15);
+  color: var(--color-info);
+}
+
+.watch-order-entry__remarks {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  margin-top: var(--space-6);
+  font-style: italic;
+}
+
+.watch-order-empty {
+  text-align: center;
+  padding: var(--space-32);
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 768px) {
+  .watch-order-header__info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .watch-order-header__meta {
+    padding-top: var(--space-8);
+    align-items: center;
+  }
+
+  .watch-order-header__genres {
+    justify-content: center;
+  }
+
+  .watch-order-tabs {
+    justify-content: center;
+  }
+}
+
 /* Anime Details */
 .anime-detail {
   position: relative;
@@ -1430,6 +1696,7 @@ select.form-control {
   padding: var(--space-24);
   margin-top: -80px;
   z-index: 2;
+  min-width: 0;
 }
 
 .anime-detail__header {
@@ -1457,6 +1724,7 @@ select.form-control {
 .anime-detail__info {
   flex: 1;
   color: white;
+  min-width: 0;
 }
 
 .anime-detail__title {
@@ -1476,6 +1744,17 @@ select.form-control {
   display: flex;
   gap: var(--space-12);
   margin-bottom: var(--space-16);
+  flex-wrap: wrap;
+}
+
+.anime-detail__actions .btn {
+  max-width: 100%;
+}
+
+.anime-detail__genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-8);
 }
 
 .anime-detail__stats {
@@ -1518,6 +1797,13 @@ select.form-control {
 .detail-section p {
   color: var(--color-text-secondary);
   line-height: var(--line-height-normal);
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.detail-section div {
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .characters-grid {
