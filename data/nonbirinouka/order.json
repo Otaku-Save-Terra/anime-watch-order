@@ -1,0 +1,39 @@
+{
+  "guid": "nonbirinouka",
+  "orders": {
+    "recommended": [
+      {
+        "title": "Farming Life in Another World (Season 1)",
+        "tag": [
+          "MAIN"
+        ],
+        "start": {
+          "episode": 1,
+          "time": null
+        },
+        "end": {
+          "episode": 12,
+          "time": null
+        },
+        "remarks": null
+      },
+      {
+        "title": "Farming Life in Another World (Season 2)",
+        "tag": [
+          "MAIN"
+        ],
+        "start": {
+          "episode": 1,
+          "time": null
+        },
+        "end": {
+          "episode": 12,
+          "time": null
+        },
+        "remarks": null
+      }
+    ],
+    "chronological": [],
+    "release": []
+  }
+}

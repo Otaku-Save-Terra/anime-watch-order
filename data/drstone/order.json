@@ -1,0 +1,123 @@
+{
+  "guid": "drstone",
+  "orders": {
+    "recommended": [
+      {
+        "title": "Dr. Stone (Season 1)",
+        "tag": [
+          "MAIN"
+        ],
+        "start": {
+          "episode": 1,
+          "time": null
+        },
+        "end": {
+          "episode": 24,
+          "time": null
+        },
+        "remarks": null
+      },
+      {
+        "title": "Dr. Stone (Season 1) : Eve of the Battle:",
+        "tag": [
+          "Special"
+        ],
+        "start": {
+          "episode": 1,
+          "time": null
+        },
+        "end": null,
+        "remarks": null
+      },
+      {
+        "title": "Dr. Stone: Stone Wars (Season 2)",
+        "tag": [
+          "MAIN"
+        ],
+        "start": {
+          "episode": 1,
+          "time": null
+        },
+        "end": {
+          "episode": 11,
+          "time": null
+        },
+        "remarks": null
+      },
+      {
+        "title": "Dr. Stone (Season 2) : Ryusui",
+        "tag": [
+          "Special"
+        ],
+        "start": {
+          "episode": 1,
+          "time": null
+        },
+        "end": null,
+        "remarks": null
+      },
+      {
+        "title": "Dr. Stone: New World (Season 3)",
+        "tag": [
+          "MAIN"
+        ],
+        "start": {
+          "episode": 1,
+          "time": null
+        },
+        "end": {
+          "episode": 22,
+          "time": null
+        },
+        "remarks": null
+      },
+      {
+        "title": "Dr. Stone: Science Future (Season 4) : Part 1",
+        "tag": [
+          "MAIN"
+        ],
+        "start": {
+          "episode": 1,
+          "time": null
+        },
+        "end": {
+          "episode": 12,
+          "time": null
+        },
+        "remarks": null
+      },
+      {
+        "title": "Dr. Stone: Science Future (Season 4) : Part 2",
+        "tag": [
+          "MAIN"
+        ],
+        "start": {
+          "episode": 1,
+          "time": null
+        },
+        "end": {
+          "episode": 12,
+          "time": null
+        },
+        "remarks": null
+      },
+      {
+        "title": "Dr. Stone: Science Future (Season 4) : Part 3",
+        "tag": [
+          "MAIN"
+        ],
+        "start": {
+          "episode": 1,
+          "time": null
+        },
+        "end": {
+          "episode": 13,
+          "time": null
+        },
+        "remarks": null
+      }
+    ],
+    "chronological": [],
+    "release": []
+  }
+}

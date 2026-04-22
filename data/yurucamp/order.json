@@ -1,0 +1,123 @@
+{
+  "guid": "yurucamp",
+  "orders": {
+    "recommended": [
+      {
+        "title": "Yuru Camp (Season 1)",
+        "tag": [
+          "MAIN"
+        ],
+        "start": {
+          "episode": 1,
+          "time": null
+        },
+        "end": {
+          "episode": 12,
+          "time": null
+        },
+        "remarks": null
+      },
+      {
+        "title": "Yuru Camp (Season 1) OVA",
+        "tag": [
+          "OVA"
+        ],
+        "start": {
+          "episode": 1,
+          "time": null
+        },
+        "end": {
+          "episode": 3,
+          "time": null
+        },
+        "remarks": null
+      },
+      {
+        "title": "Heya Camp (Room Camp)",
+        "tag": [
+          "OVA"
+        ],
+        "start": {
+          "episode": 1,
+          "time": null
+        },
+        "end": {
+          "episode": 12,
+          "time": null
+        },
+        "remarks": null
+      },
+      {
+        "title": "Heya Camp Special",
+        "tag": [
+          "OVA"
+        ],
+        "start": {
+          "episode": 1,
+          "time": null
+        },
+        "end": null,
+        "remarks": null
+      },
+      {
+        "title": "Yuru Camp (Season 2)",
+        "tag": [
+          "MAIN"
+        ],
+        "start": {
+          "episode": 1,
+          "time": null
+        },
+        "end": {
+          "episode": 13,
+          "time": null
+        },
+        "remarks": null
+      },
+      {
+        "title": "Yuru Camp (Season 2) OVA",
+        "tag": [
+          "OVA"
+        ],
+        "start": {
+          "episode": 1,
+          "time": null
+        },
+        "end": {
+          "episode": 2,
+          "time": null
+        },
+        "remarks": null
+      },
+      {
+        "title": "Yuru Camp (Season 3)",
+        "tag": [
+          "MAIN"
+        ],
+        "start": {
+          "episode": 1,
+          "time": null
+        },
+        "end": {
+          "episode": 12,
+          "time": null
+        },
+        "remarks": null
+      },
+      {
+        "title": "Yuru Camp The Movie",
+        "tag": [
+          "Movie"
+        ],
+        "start": {
+          "episode": 1,
+          "time": null
+        },
+        "end": null,
+        "remarks": "The story is set roughly 10 years after they graduate."
+      }
+    ],
+    "chronological": [],
+    "release": []
+  }
+}

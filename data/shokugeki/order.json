@@ -1,0 +1,141 @@
+{
+  "guid": "shokugeki",
+  "orders": {
+    "recommended": [
+      {
+        "title": "Food Wars! (Season 1)",
+        "tag": [
+          "MAIN"
+        ],
+        "start": {
+          "episode": 1,
+          "time": null
+        },
+        "end": {
+          "episode": 24,
+          "time": null
+        },
+        "remarks": null
+      },
+      {
+        "title": "Food Wars! (Season 1) OVA",
+        "tag": [
+          "OVA"
+        ],
+        "start": {
+          "episode": 1,
+          "time": null
+        },
+        "end": {
+          "episode": 2,
+          "time": null
+        },
+        "remarks": null
+      },
+      {
+        "title": "Food Wars! (Season 2) : The Second Plate",
+        "tag": [
+          "MAIN"
+        ],
+        "start": {
+          "episode": 1,
+          "time": null
+        },
+        "end": {
+          "episode": 13,
+          "time": null
+        },
+        "remarks": null
+      },
+      {
+        "title": "Food Wars! (Season 2) OVA",
+        "tag": [
+          "OVA"
+        ],
+        "start": {
+          "episode": 1,
+          "time": null
+        },
+        "end": {
+          "episode": 2,
+          "time": null
+        },
+        "remarks": null
+      },
+      {
+        "title": "Food Wars! (Season 3) : The Third Plate - Part 1",
+        "tag": [
+          "MAIN"
+        ],
+        "start": {
+          "episode": 1,
+          "time": null
+        },
+        "end": {
+          "episode": 12,
+          "time": null
+        },
+        "remarks": null
+      },
+      {
+        "title": "Food Wars! (Season 3) OVA",
+        "tag": [
+          "OVA"
+        ],
+        "start": {
+          "episode": 1,
+          "time": null
+        },
+        "end": null,
+        "remarks": null
+      },
+      {
+        "title": "Food Wars! (Season 3) : The Third Plate - Part 2",
+        "tag": [
+          "MAIN"
+        ],
+        "start": {
+          "episode": 1,
+          "time": null
+        },
+        "end": {
+          "episode": 12,
+          "time": null
+        },
+        "remarks": null
+      },
+      {
+        "title": "Food Wars! (Season 4) : The Fourth Plate",
+        "tag": [
+          "MAIN"
+        ],
+        "start": {
+          "episode": 1,
+          "time": null
+        },
+        "end": {
+          "episode": 12,
+          "time": null
+        },
+        "remarks": null
+      },
+      {
+        "title": "Food Wars! (Season 5) : The Fifth Plate",
+        "tag": [
+          "MAIN"
+        ],
+        "start": {
+          "episode": 1,
+          "time": null
+        },
+        "end": {
+          "episode": 13,
+          "time": null
+        },
+        "remarks": null
+      }
+    ],
+    "chronological": [],
+    "release": []
+  }
+}

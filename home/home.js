@@ -7,9 +7,9 @@
  */
 
 const INDEX_JSON_URL = '../data/index.json';
-const DASHBOARD_MODAL_ID = 'animeModal';
-const DASHBOARD_MODAL_DETAILS_ID = 'animeDetails';
-const dashboardCatalogByGuid = new Map();
+const HOME_MODAL_ID = 'animeModal';
+const HOME_MODAL_DETAILS_ID = 'animeDetails';
+const homeCatalogByGuid = new Map();
 
 /**
  * @returns {Promise<SeriesIndexModel[]>}
@@ -53,10 +53,19 @@ function escapeAttr(text) {
   return escapeHtml(text).replace(/'/g, '&#39;');
 }
 
-function resolveThumbnailFromDashboard(thumbnail) {
+function resolveThumbnailFromHome(thumbnail) {
   if (!thumbnail) return '';
   const path = thumbnail.startsWith('/') ? thumbnail.slice(1) : thumbnail;
   return `../${path}`;
+}
+
+const GENRE_COLOR_COUNT = 8;
+function genreColorIndex(genre) {
+  let hash = 0;
+  for (let i = 0; i < genre.length; i++) {
+    hash = genre.charCodeAt(i) + ((hash << 5) - hash);
+  }
+  return Math.abs(hash) % GENRE_COLOR_COUNT;
 }
 
 function pickRandomSubset(list, maxCount) {
@@ -76,7 +85,7 @@ function infoJsonUrlFromGuid(guid) {
  * Loading placeholder (mirrors app.js `createSkeletonCard`).
  * @returns {string}
  */
-function createDashboardSkeletonCard() {
+function createHomeSkeletonCard() {
   return `
     <div class="skeleton-card">
       <div class="skeleton-image skeleton"></div>
@@ -90,18 +99,18 @@ function createDashboardSkeletonCard() {
 }
 
 /**
- * Anime card for catalog entries (mirrors app.js `createAnimeCard` layout; no AniList / API fields).
+ * Anime card for catalog entries (mirrors app.js `createAnimeCard` layout).
  * @param {SeriesIndexModel} model
  * @returns {string}
  */
-function createDashboardAnimeCard(model) {
+function createHomeAnimeCard(model) {
   const title = escapeHtml(model.title.main);
   const genres = model.title.alt.slice(1, 4);
-  const imgSrc = resolveThumbnailFromDashboard(model.thumbnail);
+  const imgSrc = resolveThumbnailFromHome(model.thumbnail);
   const guidAttr = escapeAttr(model.guid);
 
   return `
-    <div class="anime-card" data-dashboard-guid="${guidAttr}" tabindex="0">
+    <div class="anime-card" data-home-guid="${guidAttr}" tabindex="0">
       <div class="anime-card__image">
         <img src="${imgSrc}" alt="${title}" loading="lazy" onerror="this.style.display='none'">
         <div class="anime-card__actions"></div>
@@ -121,19 +130,19 @@ function createDashboardAnimeCard(model) {
  * @param {SeriesIndexModel} model
  * @returns {string}
  */
-function createDashboardFeaturedCard(model) {
+function createHomeFeaturedCard(model) {
   const title = escapeHtml(model.title.main);
-  const imgSrc = resolveThumbnailFromDashboard(model.thumbnail);
+  const imgSrc = resolveThumbnailFromHome(model.thumbnail);
   const guidAttr = escapeAttr(model.guid);
 
   return `
-    <div class="featured-card" data-dashboard-guid="${guidAttr}" tabindex="0">
+    <div class="featured-card" data-home-guid="${guidAttr}" tabindex="0">
       <img src="${imgSrc}" alt="${title}" loading="lazy" onerror="this.style.display='none'">
     </div>
   `;
 }
 
-function createDashboardDetailHtml(indexModel, info) {
+function createHomeDetailHtml(indexModel, info) {
   const guid = indexModel.guid || '';
   const title = escapeHtml(info?.title?.main || indexModel.title.main || 'Untitled');
   const description = escapeHtml(info?.description || 'No description available yet.');
@@ -148,13 +157,13 @@ function createDashboardDetailHtml(indexModel, info) {
   const year = info?.year != null ? escapeHtml(info.year) : null;
   const seasonYear = season && year ? `${season} ${year}` : (season || year || 'N/A');
   const malUrl = typeof info?.mal === 'string' && info.mal ? info.mal : '';
-  const bannerSrc = resolveThumbnailFromDashboard(info?.banner || indexModel.thumbnail);
-  const coverSrc = resolveThumbnailFromDashboard(info?.thumbnail || indexModel.thumbnail);
+  const bannerSrc = resolveThumbnailFromHome(info?.banner || indexModel.thumbnail);
+  const coverSrc = resolveThumbnailFromHome(info?.thumbnail || indexModel.thumbnail);
   const nativeSubtitle = alternateNames[0] || '';
 
   return `
     <div class="anime-detail" data-guid="${escapeAttr(guid)}">
-      <div id="dashboardAnimeGuid" data-guid="${escapeAttr(guid)}" class="hidden"></div>
+      <div id="homeAnimeGuid" data-guid="${escapeAttr(guid)}" class="hidden"></div>
       <div class="anime-detail__banner" style="background-image: url('${escapeAttr(bannerSrc)}')"></div>
       <div class="anime-detail__content">
         <div class="anime-detail__header">
@@ -174,7 +183,7 @@ function createDashboardDetailHtml(indexModel, info) {
                 <div class="stat__label">Series Status</div>
               </div>
             </div>
-            ${genres.length ? `<div class="anime-detail__genres">${genres.map((genre) => `<span class="genre-tag">${genre}</span>`).join('')}</div>` : ''}
+            ${genres.length ? `<div class="anime-detail__genres">${genres.map((genre) => `<span class="genre-tag genre-tag--color-${genreColorIndex(genre)}">${genre}</span>`).join('')}</div>` : ''}
           </div>
         </div>
         <div class="anime-detail__sections">
@@ -196,20 +205,20 @@ function createDashboardDetailHtml(indexModel, info) {
   `;
 }
 
-function closeDashboardAnimeModal() {
-  const modal = document.getElementById(DASHBOARD_MODAL_ID);
-  const detailsContainer = document.getElementById(DASHBOARD_MODAL_DETAILS_ID);
+function closeHomeAnimeModal() {
+  const modal = document.getElementById(HOME_MODAL_ID);
+  const detailsContainer = document.getElementById(HOME_MODAL_DETAILS_ID);
   if (modal) modal.classList.add('hidden');
   if (detailsContainer) detailsContainer.innerHTML = '';
 }
 
-async function openDashboardAnimeModal(model) {
-  const modal = document.getElementById(DASHBOARD_MODAL_ID);
-  const detailsContainer = document.getElementById(DASHBOARD_MODAL_DETAILS_ID);
+async function openHomeAnimeModal(model) {
+  const modal = document.getElementById(HOME_MODAL_ID);
+  const detailsContainer = document.getElementById(HOME_MODAL_DETAILS_ID);
   if (!modal || !detailsContainer) return;
 
   modal.classList.remove('hidden');
-  detailsContainer.innerHTML = createDashboardSkeletonCard();
+  detailsContainer.innerHTML = createHomeSkeletonCard();
 
   try {
     const res = await fetch(infoJsonUrlFromGuid(model.guid));
@@ -217,19 +226,19 @@ async function openDashboardAnimeModal(model) {
     if (res.ok) {
       info = await res.json();
     }
-    detailsContainer.innerHTML = createDashboardDetailHtml(model, info);
+    detailsContainer.innerHTML = createHomeDetailHtml(model, info);
   } catch (err) {
-    console.error('Dashboard info load failed:', err);
-    detailsContainer.innerHTML = createDashboardDetailHtml(model, null);
+    console.error('Home info load failed:', err);
+    detailsContainer.innerHTML = createHomeDetailHtml(model, null);
   }
 }
 
-function attachDashboardCatalogCardListeners(container) {
-  container.querySelectorAll('[data-dashboard-guid]').forEach((card) => {
+function attachHomeCatalogCardListeners(container) {
+  container.querySelectorAll('[data-home-guid]').forEach((card) => {
     const open = () => {
-      const guid = card.getAttribute('data-dashboard-guid');
+      const guid = card.getAttribute('data-home-guid');
       if (!guid) return;
-      const model = dashboardCatalogByGuid.get(guid) || {
+      const model = homeCatalogByGuid.get(guid) || {
         guid,
         title: {
           main: card.querySelector('.anime-card__title')?.textContent?.trim() || card.querySelector('img')?.alt || 'Untitled',
@@ -237,7 +246,7 @@ function attachDashboardCatalogCardListeners(container) {
         },
         thumbnail: '',
       };
-      openDashboardAnimeModal(model);
+      openHomeAnimeModal(model);
     };
     card.addEventListener('click', open);
     card.addEventListener('keypress', (e) => {
@@ -246,33 +255,33 @@ function attachDashboardCatalogCardListeners(container) {
   });
 }
 
-function initDashboardModal() {
-  const modal = document.getElementById(DASHBOARD_MODAL_ID);
+function initHomeModal() {
+  const modal = document.getElementById(HOME_MODAL_ID);
   const closeBtn = document.getElementById('closeModal');
   if (!modal) return;
 
-  closeBtn?.addEventListener('click', closeDashboardAnimeModal);
+  closeBtn?.addEventListener('click', closeHomeAnimeModal);
   modal.addEventListener('click', (e) => {
     if (e.target === modal || e.target.classList.contains('modal__backdrop')) {
-      closeDashboardAnimeModal();
+      closeHomeAnimeModal();
     }
   });
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-      closeDashboardAnimeModal();
+      closeHomeAnimeModal();
     }
   });
 }
 
 /**
- * Fill all grids marked with `data-dashboard-catalog="true"` from index.json models.
+ * Fill all grids marked with `data-home-catalog="true"` from index.json models.
  */
-async function loadDashboardCatalogFromIndex() {
-  const grids = document.querySelectorAll('[data-dashboard-catalog="true"]');
+async function loadHomeCatalogFromIndex() {
+  const grids = document.querySelectorAll('[data-home-catalog="true"]');
   const featuredCarousel = document.getElementById('featuredCarousel');
   if (!grids.length && !featuredCarousel) return;
 
-  const skeleton = Array(6).fill(0).map(() => createDashboardSkeletonCard()).join('');
+  const skeleton = Array(6).fill(0).map(() => createHomeSkeletonCard()).join('');
   grids.forEach((el) => {
     el.innerHTML = skeleton;
   });
@@ -282,10 +291,10 @@ async function loadDashboardCatalogFromIndex() {
 
   try {
     const models = await fetchIndexCatalogModels();
-    dashboardCatalogByGuid.clear();
+    homeCatalogByGuid.clear();
     models.forEach((model) => {
       if (model.guid) {
-        dashboardCatalogByGuid.set(model.guid, model);
+        homeCatalogByGuid.set(model.guid, model);
       }
     });
     if (models.length === 0) {
@@ -299,22 +308,23 @@ async function loadDashboardCatalogFromIndex() {
       return;
     }
 
-    const recentlyUpdatedModels = models.slice(0, 10);
+    const recentlyUpdatedModels = [...models].reverse().slice(0, 10);
     const featuredModels = pickRandomSubset(models, 10);
 
-    const recentHtml = recentlyUpdatedModels.map((m) => createDashboardAnimeCard(m)).join('');
-    const featuredHtml = featuredModels.map((m) => createDashboardFeaturedCard(m)).join('');
+    const recentHtml = recentlyUpdatedModels.map((m) => createHomeAnimeCard(m)).join('');
+    const featuredHtml = featuredModels.map((m) => createHomeFeaturedCard(m)).join('');
 
     grids.forEach((el) => {
       el.innerHTML = recentHtml;
-      attachDashboardCatalogCardListeners(el);
+      attachHomeCatalogCardListeners(el);
     });
     if (featuredCarousel) {
       featuredCarousel.innerHTML = featuredHtml;
-      attachDashboardCatalogCardListeners(featuredCarousel);
+      attachHomeCatalogCardListeners(featuredCarousel);
+      initCarouselAutoSlide(featuredCarousel);
     }
   } catch (err) {
-    console.error('Dashboard catalog load failed:', err);
+    console.error('Home catalog load failed:', err);
     const errHtml = '<div class="error-message"><p>Could not load the series list.</p></div>';
     grids.forEach((el) => {
       el.innerHTML = errHtml;
@@ -325,7 +335,7 @@ async function loadDashboardCatalogFromIndex() {
   }
 }
 
-// --- Theme (compatible with `aniclone_user` from main app; dashboard-only names) ---
+// --- Theme (compatible with `aniclone_user` from main app; home-only names) ---
 
 function readStoredUser() {
   try {
@@ -348,21 +358,21 @@ function writeStoredUser(user) {
   }
 }
 
-function initDashboardTheme() {
+function initHomeTheme() {
   const user = readStoredUser();
   const theme = user.preferences?.theme ?? 'auto';
   if (theme === 'dark') {
     document.documentElement.setAttribute('data-color-scheme', 'dark');
-    updateDashboardThemeIcon('dark');
+    updateHomeThemeIcon('dark');
   } else if (theme === 'light') {
     document.documentElement.setAttribute('data-color-scheme', 'light');
-    updateDashboardThemeIcon('light');
+    updateHomeThemeIcon('light');
   } else {
-    updateDashboardThemeIcon('auto');
+    updateHomeThemeIcon('auto');
   }
 }
 
-function updateDashboardThemeIcon(theme) {
+function updateHomeThemeIcon(theme) {
   const lightIcon = document.querySelector('.theme-icon--light');
   const darkIcon = document.querySelector('.theme-icon--dark');
   if (theme === 'dark') {
@@ -374,7 +384,7 @@ function updateDashboardThemeIcon(theme) {
   }
 }
 
-function toggleDashboardTheme() {
+function toggleHomeTheme() {
   const current = document.documentElement.getAttribute('data-color-scheme');
   const nextIsDark = current !== 'dark';
   const user = readStoredUser();
@@ -382,26 +392,119 @@ function toggleDashboardTheme() {
   writeStoredUser(user);
   if (nextIsDark) {
     document.documentElement.setAttribute('data-color-scheme', 'dark');
-    updateDashboardThemeIcon('dark');
+    updateHomeThemeIcon('dark');
   } else {
     document.documentElement.setAttribute('data-color-scheme', 'light');
-    updateDashboardThemeIcon('light');
+    updateHomeThemeIcon('light');
   }
 }
 
-function initDashboardChrome() {
-  initDashboardTheme();
+function initHomeChrome() {
+  initHomeTheme();
   const themeToggle = document.getElementById('themeToggle');
   if (themeToggle) {
-    themeToggle.addEventListener('click', toggleDashboardTheme);
+    themeToggle.addEventListener('click', toggleHomeTheme);
   }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  initDashboardChrome();
-  initDashboardModal();
-  loadDashboardCatalogFromIndex();
+  initHomeChrome();
+  initHomeModal();
+  loadHomeCatalogFromIndex().then(() => loadContinueWatching());
 });
+
+// --- Continue Watching (from progress cookie) ---
+
+function getProgressCookie() {
+  try {
+    const match = document.cookie.match(/(?:^|;\s*)aniwatch_progress=([^;]*)/);
+    if (match) return JSON.parse(decodeURIComponent(match[1]));
+  } catch (_) { /* ignore */ }
+  return {};
+}
+
+function loadContinueWatching() {
+  const section = document.getElementById('continueWatchingSection');
+  const grid = document.getElementById('continueWatchingGrid');
+  if (!section || !grid) return;
+
+  const progress = getProgressCookie();
+  // Extract unique guids that have at least one checked entry
+  const guids = [...new Set(
+    Object.keys(progress)
+      .filter(key => Array.isArray(progress[key]) && progress[key].length > 0)
+      .map(key => key.split(':')[0])
+  )];
+
+  if (!guids.length) return;
+
+  // Filter to guids we have in the catalog
+  const cards = guids
+    .map(guid => homeCatalogByGuid.get(guid))
+    .filter(Boolean);
+
+  if (!cards.length) return;
+
+  grid.innerHTML = cards.map(m => createHomeAnimeCard(m)).join('');
+  attachHomeCatalogCardListeners(grid);
+  section.classList.remove('hidden');
+}
+
+// --- Auto-sliding featured carousel ---
+
+function initCarouselAutoSlide(carousel) {
+  const cards = carousel.querySelectorAll('.featured-card');
+  if (cards.length <= 1) return;
+
+  const INTERVAL_MS = 4000;
+  let timerId = null;
+  let currentIndex = 0;
+
+  function getCardStep() {
+    if (cards.length < 2) return 216;
+    return cards[1].offsetLeft - cards[0].offsetLeft;
+  }
+
+  function advance() {
+    const step = getCardStep();
+    const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+    if (carousel.scrollLeft + step >= maxScroll) {
+      carousel.style.scrollBehavior = 'auto';
+      carousel.scrollLeft = 0;
+      // Force reflow then restore smooth
+      void carousel.offsetHeight;
+      carousel.style.scrollBehavior = 'smooth';
+      currentIndex = 0;
+    } else {
+      carousel.style.scrollBehavior = 'smooth';
+      currentIndex += 1;
+      carousel.scrollLeft += step;
+    }
+  }
+
+  function start() {
+    if (timerId) return;
+    timerId = setInterval(advance, INTERVAL_MS);
+  }
+
+  function pause() {
+    if (timerId) {
+      clearInterval(timerId);
+      timerId = null;
+    }
+  }
+
+  carousel.addEventListener('mouseenter', pause);
+  carousel.addEventListener('mouseleave', start);
+  carousel.addEventListener('touchstart', pause, { passive: true });
+  carousel.addEventListener('touchend', start);
+  carousel.addEventListener('touchcancel', start);
+
+  // Only auto-slide when content overflows
+  if (carousel.scrollWidth > carousel.clientWidth) {
+    start();
+  }
+}
 
 // Hero: scroll to catalog section
 document.addEventListener('click', (e) => {

@@ -12,5 +12,6 @@
   "banner": "/images/drstone-banner.jpg",
   "mal": "https://myanimelist.net/anime/38691/Dr_Stone",
   "genre": [ "Adventure", "Action", "Sci-Fi", "Comedy" ],
-  "status": "Ongoing"
+  "status": "Ongoing",
+  "contributors": [ "Otaku-Save-Terra" ]
 }

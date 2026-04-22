@@ -1,0 +1,234 @@
+{
+  "guid": "gup",
+  "orders": {
+    "recommended": [
+      {
+        "title": "Girls und Panzer (Season 1)",
+        "tag": [
+          "MAIN"
+        ],
+        "start": {
+          "episode": 1,
+          "time": null
+        },
+        "end": {
+          "episode": 4,
+          "time": null
+        },
+        "remarks": null
+      },
+      {
+        "title": "Girls und Panzer (Season 1) OVA",
+        "tag": [
+          "OVA"
+        ],
+        "start": {
+          "episode": 1,
+          "time": null
+        },
+        "end": {
+          "episode": 2,
+          "time": null
+        },
+        "remarks": null
+      },
+      {
+        "title": "Girls und Panzer : Shoukai Shimasu!",
+        "tag": [
+          "Special"
+        ],
+        "start": {
+          "episode": 1,
+          "time": null
+        },
+        "end": null,
+        "remarks": null
+      },
+      {
+        "title": "Girls und Panzer (Season 1)",
+        "tag": [
+          "MAIN"
+        ],
+        "start": {
+          "episode": 5,
+          "time": null
+        },
+        "end": {
+          "episode": 6,
+          "time": null
+        },
+        "remarks": null
+      },
+      {
+        "title": "Girls und Panzer (Season 1) OVA",
+        "tag": [
+          "OVA"
+        ],
+        "start": {
+          "episode": 3,
+          "time": null
+        },
+        "end": null,
+        "remarks": null
+      },
+      {
+        "title": "Girls und Panzer (Season 1)",
+        "tag": [
+          "MAIN"
+        ],
+        "start": {
+          "episode": 7,
+          "time": null
+        },
+        "end": null,
+        "remarks": null
+      },
+      {
+        "title": "Girls und Panzer : This is the Real Anzio Battle!",
+        "tag": [
+          "Movie"
+        ],
+        "start": {
+          "episode": 1,
+          "time": null
+        },
+        "end": null,
+        "remarks": "Don't watch the short clip after ending"
+      },
+      {
+        "title": "Akiyama Yukari’s Senshado Kouza: Anzio Edition",
+        "tag": [
+          "Blu-ray"
+        ],
+        "start": {
+          "episode": 1,
+          "time": null
+        },
+        "end": null,
+        "remarks": null
+      },
+      {
+        "title": "Girls und Panzer (Season 1)",
+        "tag": [
+          "MAIN"
+        ],
+        "start": {
+          "episode": 8,
+          "time": null
+        },
+        "end": {
+          "episode": 9,
+          "time": "7:10"
+        },
+        "remarks": "When they sent out for scouting"
+      },
+      {
+        "title": "Girls und Panzer (Season 1) OVA",
+        "tag": [
+          "OVA"
+        ],
+        "start": {
+          "episode": 5,
+          "time": null
+        },
+        "end": null,
+        "remarks": null
+      },
+      {
+        "title": "Girls und Panzer (Season 1)",
+        "tag": [
+          "MAIN"
+        ],
+        "start": {
+          "episode": 9,
+          "time": null
+        },
+        "end": {
+          "episode": 10,
+          "time": null
+        },
+        "remarks": null
+      },
+      {
+        "title": "Girls und Panzer (Season 1) OVA",
+        "tag": [
+          "OVA"
+        ],
+        "start": {
+          "episode": 4,
+          "time": null
+        },
+        "end": null,
+        "remarks": null
+      },
+      {
+        "title": "Girls und Panzer : Shoukai Shimasu!",
+        "tag": [
+          "Special"
+        ],
+        "start": {
+          "episode": 2,
+          "time": null
+        },
+        "end": null,
+        "remarks": null
+      },
+      {
+        "title": "Girls und Panzer (Season 1)",
+        "tag": [
+          "MAIN"
+        ],
+        "start": {
+          "episode": 11,
+          "time": null
+        },
+        "end": {
+          "episode": 12,
+          "time": null
+        },
+        "remarks": null
+      },
+      {
+        "title": "Girls und Panzer : This is the Real Anzio Battle!",
+        "tag": [
+          "Movie"
+        ],
+        "start": {
+          "episode": 1,
+          "time": null
+        },
+        "end": null,
+        "remarks": "Watch the short clip after ending"
+      },
+      {
+        "title": "Girls und Panzer (Season 1) OVA",
+        "tag": [
+          "OVA"
+        ],
+        "start": {
+          "episode": 6,
+          "time": null
+        },
+        "end": null,
+        "remarks": null
+      },
+      {
+        "title": "Nihon Senshadou Renmei News",
+        "tag": [
+          "Blu-ray"
+        ],
+        "start": {
+          "episode": 1,
+          "time": null
+        },
+        "end": {
+          "episode": 2,
+          "time": null
+        },
+        "remarks": "something like trailer for GuP Ep 11 & 12, didn't have the important scene but some spoilers, about 3 minutes per episode)"
+      }
+    ],
+    "chronological": [],
+    "release": []
+  }
+}

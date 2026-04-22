@@ -1,0 +1,17 @@
+{
+  "guid": "yurucamp",
+  "title": {
+    "main": "Yuru Camp",
+    "alt": [ "ゆるキャン△", "Laid-Back Camp" ]
+  },
+  "thumbnail": "/images/yurucamp.jpg",
+  "studio": [ "C-Station", "Crunchyroll" ],
+  "description": "Rin likes to go camping by herself along the lakes that provide a scenic view of Mt. Fuji. Nadeshiko loves to take cycling trips by herself to places where she can see Mt. Fuji. After they meet, Rin and Nadeshiko take camping trips, eat cup ramen together, and enjoy the scenery. (Source: Anime News Network)",
+  "season": "WINTER",
+  "year": 2018,
+  "banner": "/images/yurucamp-banner.jpg",
+  "mal": "https://myanimelist.net/anime/34798/Yuru_Camp%E2%96%B3",
+  "genre": [ "Slice of Life", "Comedy" ],
+  "status": "Ongoing",
+  "contributors": [ "Otaku-Save-Terra" ]
+}

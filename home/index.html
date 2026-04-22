@@ -3,6 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6Z5WR106YH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6Z5WR106YH');
+    </script>
+    <meta name="google-site-verification" content="HmcKjUyHIMvD8RCWr3dxIAojKqcx5ykNgl19R19-ZQA" />
+    <link rel="canonical" href="https://otaku-save-terra.github.io/anime-watch-order/" />
     <title>Anime Watch Order</title>
     <meta name="description" content="Complete anime watch order guide. Discover chronological order, release order, and recommended viewing order for popular anime series and movies.">
     <link rel="icon" href="../assets/images/v1.png" type="image/png">
@@ -15,14 +25,10 @@
         <div class="container">
             <div class="header__content">
                 <div class="logo">
-                    <h1>AniWatch Order</h1>
+                    <a href="../home/index.html"><img src="../assets/images/title.png" alt="AniWatch Order" class="logo__img"></a>
                 </div>
 
                 <nav class="nav">
-                    <button class="nav__link active" data-page="home">Home</button>
-                    <button class="nav__link" data-page="rankings">Browse</button>
-                    <button class="nav__link" data-page="search">About</button>
-                    <button class="nav__link" data-page="search">FAQ</button>
                 </nav>
 
                 <div class="header__actions">
@@ -67,12 +73,20 @@
                     </div>
                 </div>
 
+                <section id="continueWatchingSection" class="section hidden">
+                    <div class="section__header">
+                        <h2>Continue Watching</h2>
+                    </div>
+                    <div id="continueWatchingGrid" class="anime-grid anime-grid--horizontal">
+                    </div>
+                </section>
+
                 <section id="recentUpdateSection" class="section">
                     <div class="section__header">
                         <h2>Recently Updated</h2>
-                        <button class="btn btn--secondary btn--sm" data-action="view-all-trending">View All</button>
+                        <a class="btn btn--secondary btn--sm" href="../browse/index.html">View All</a>
                     </div>
-                    <div id="recentlyUpdatedGrid" class="anime-grid anime-grid--horizontal" data-dashboard-catalog="true">
+                    <div id="recentlyUpdatedGrid" class="anime-grid anime-grid--horizontal" data-home-catalog="true">
                     </div>
                 </section>
 
@@ -81,7 +95,7 @@
                         <h1 class="hero__title">Want to share your watch order?</h1>
                         <p class="hero__subtitle">You can add your watch order and contribute to this site!</p>
                         <div class="hero__actions">
-                            <button class="btn btn--second">Learn More</button>
+                            <a class="btn btn--secondary" href="https://github.com/Otaku-Save-Terra/anime-watch-order/wiki" target="_blank">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -131,33 +145,9 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer__content">
-                <div class="footer__section">
-                    <h4>AniWatch Order</h4>
-                    <p>An anime watch order site built with vanilla JS, HTML, CSS. Features dark/light themes, responsive design, infinite scroll.</p>
-                </div>
-                <div class="footer__section">
-                    <h4>Links</h4>
-                    <ul>
-                        <li><a href="https://github.com/Otaku-Save-Terra/anime-watch-order" target="_blank">About</a></li>
-                        <li><a href="" target="_blank">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="footer__section">
-                    <h4>Community</h4>
-                    <ul>
-                        <li><a href="" target="_blank">Reddit</a></li>
-                        <li><a href="https://github.com/Otaku-Save-Terra/anime-watch-order" target="_blank">Github</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer__bottom">
-                <p>Copyright &copy; 2026 Otaku-Save-Terra. All rights reserved.</p>
-            </div>
-        </div>
     </footer>
 
-    <script src="dashboard.js"></script>
+    <script src="../shared.js"></script>
+    <script src="home.js"></script>
 </body>
 </html>

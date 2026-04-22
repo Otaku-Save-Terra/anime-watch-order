@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6Z5WR106YH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6Z5WR106YH');
+    </script>
+    <meta name="google-site-verification" content="HmcKjUyHIMvD8RCWr3dxIAojKqcx5ykNgl19R19-ZQA" />
+    <link rel="canonical" href="https://otaku-save-terra.github.io/anime-watch-order/faq/index.html" />
+    <title>Anime Watch Order - FAQ</title>
+    <meta name="description" content="Frequently asked questions about AniWatch Order.">
+    <link rel="icon" href="../assets/images/v1.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="logo">
+                    <a href="../home/index.html"><img src="../assets/images/title.png" alt="AniWatch Order" class="logo__img"></a>
+                </div>
+
+                <nav class="nav">
+                </nav>
+
+                <div class="header__actions">
+                    <div class="search-container">
+                        <input type="text" id="searchInput" class="search-input" placeholder="Search anime...">
+                        <button id="searchButton" class="search-button">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                        </button>
+                        <div id="searchSuggestions" class="search-suggestions hidden"></div>
+                    </div>
+
+                    <button id="themeToggle" class="theme-toggle">
+                        <i class="theme-icon theme-icon--light fa-solid fa-sun" aria-hidden="true"></i>
+                        <i class="theme-icon theme-icon--dark fa-solid fa-moon hidden" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <br>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <section class="page active">
+                <div class="page-header">
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Common questions about AniWatch Order</p>
+                </div>
+
+                <div class="faq-list" style="max-width: 720px; margin: 0 auto;">
+                    <details class="faq-item" open>
+                        <summary class="faq-item__question">What is the difference between Recommended, Chronological, and Release order?</summary>
+                        <div class="faq-item__answer">
+                            <p><strong>Recommended</strong> is the order we suggest for the best viewing experience — it may interleave OVAs and specials at the right story points.</p>
+                            <p><strong>Chronological</strong> follows the in-universe timeline of events.</p>
+                            <p><strong>Release Order</strong> is the order each entry aired or was published.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-item__question">Do I need to watch OVAs and specials?</summary>
+                        <div class="faq-item__answer">
+                            <p>It depends on the series. Some OVAs are standalone fun episodes, while others contain important plot points. Our recommended order includes them where they matter most. Entries tagged as optional will be noted in the remarks.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-item__question">How does the progress checkbox work?</summary>
+                        <div class="faq-item__answer">
+                            <p>Each entry in a watch order has a checkbox you can tick to mark it as watched. Your progress is saved in a browser cookie, so it persists across sessions. It tracks your progress per series and per order tab (recommended, chronological, release).</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-item__question">How can I add a new anime watch order?</summary>
+                        <div class="faq-item__answer">
+                            <p>You can use our <a href="../tools/index.html" style="color: var(--color-primary);">Tools page</a> to generate the required JSON files (<code>info.json</code> and <code>order.json</code>), then submit a pull request to our <a href="https://github.com/Otaku-Save-Terra/anime-watch-order" target="_blank" style="color: var(--color-primary);">GitHub repository</a>.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-item__question">Why is a series missing?</summary>
+                        <div class="faq-item__answer">
+                            <p>We add series over time based on community demand. If you'd like to see a specific anime, open an issue on GitHub or contribute the watch order yourself!</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-item__question">Is this site free? Are there ads?</summary>
+                        <div class="faq-item__answer">
+                            <p>Yes, completely free and ad-free. Always. The site is open source and hosted on GitHub Pages at zero cost.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-item__question">Does this site stream anime?</summary>
+                        <div class="faq-item__answer">
+                            <p>No. AniWatch Order only provides watch order guides. We do not host, stream, or link to any anime content. Please use legal streaming services to watch anime.</p>
+                        </div>
+                    </details>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+    </footer>
+
+    <script src="../shared.js"></script>
+    <script src="../home/home.js"></script>
+</body>
+</html>

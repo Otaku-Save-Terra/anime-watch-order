@@ -1,109 +1,12 @@
-# 📄 Image Copyright & Legal Documentation
+# Assets
 
-I've created comprehensive copyright and legal usage documentation for all the generated images. Here's the complete legal framework:
+This directory contains images and other static assets for the AniWatch Order site.
 
-## 🎨 **Copyright Holder: [Shinei Nouzen](https://linktr.ee/ikx7.a)**
+## Note
 
-All generated images (logos and thumbnails) are now officially attributed to **[Shinei Nouzen](https://linktr.ee/ikx7.a)** with full copyright protection and clear usage guidelines.
+The original images under assets/images were created and under CC BY 4.0.
+If all images have been replaced with custom ones, no attribution is required for the images.
 
-## 📋 **Key Legal Points**
-
-### **✅ Permitted Uses:**
-- Educational and tutorial purposes
-- Portfolio and professional showcase
-- Open source project assets
-- Blog articles and technical content
-- Social media sharing (with credit)
-- GitHub repository documentation
-- Presentation materials
-
-### **❌ Prohibited Uses:**
-- Direct commercial sales
-- Trademark claims
-- Redistribution without attribution
-- Claiming original authorship
-- Brand impersonation
-
-## 🏷️ **Attribution Requirements**
-
-### **Minimum Attribution:**
-```
-Images created by Shinei Nouzen
-```
-
-### **Recommended Attribution:**
-```
-AniList Thumbnails & Logos
-"Created by": "Shinei Nouzen"
-"Project": "AniList"
-"License": "Creative Commons Attribution 4.0"
-```
-
-### **Full Attribution (Preferred):**
-```json
-🎨 Design Credit
-Creator: Shinei Nouzen
-Project: AniList - Production Ready
-Images: Logo variations and device mockup thumbnails
-Usage: Open source project assets
-License: CC BY 4.0
-Year: 2025
-```
-
-## 📱 **Usage Examples**
-
-### **For GitHub README:**
-```markdown
-## 🎨 Design Credits
-Logos and thumbnails created by **[Shinei Nouzen](https://linktr.ee/ikx7.a)**  
-Licensed under [CC BY 4.0](https://creativecommons.org/censes/by/4.0/)
-```
-
-### **For Website Footer:**
-```html
-  Logo designs by Shinei Nouzen
-  Licensed under CC BY 4.0
-```
-
-### **For Social Media:**
-```
-🎌 AniList Clone showcase
-🎨 Designs by [Shinei Nouzen](https://linktr.ee/ikx7.a)
-#AnimeWebDev #AniList
-```
-
-## 🔍 **Complete Image Inventory**
-
-### **Logo Variations (6 designs):**
-1. Modern minimalist geometric design
-2. Anime-style mascot character design  
-3. Cyberpunk futuristic neon design
-4. Retro 80s vaporwave aesthetic
-5. Japanese calligraphy traditional style
-6. Gaming-inspired pixel art design
-
-### **Device Mockup Thumbnails (5 designs):**
-1. Professional tech mockup
-2. Sleek gradient design
-3. Dark theme cyberpunk aesthetic
-4. YouTube thumbnail style
-5. Clean minimal portfolio style
-
-## ⚖️ **License: Creative Commons Attribution 4.0**
-
-The images are released under **CC BY 4.0**, which allows:
-- ✅ **Sharing** and redistribution
-- ✅ **Adaptation** and modification
-- ✅ **Commercial use** with proper attribution
-- 🏷️ **Attribution requirement** - Must credit [Shinei Nouzen](https://linktr.ee/ikx7.a)
-
-## 📞 **Contact & Compliance**
-
-**Rights Holder:** [Shinei Nouzen](https://linktr.ee/ikx7.a)  
-**Current Version:** 0.2 
-**Effective Date:** August 2025
-
-### **Quick Reference:**
-**✅ DO:** Credit creator, use for educational/portfolio purposes, modify with attribution  
-**❌ DON'T:** Remove credits, claim authorship, use for trademark purposes  
-**🏷️ ATTRIBUTION:** `Created by [Shinei Nouzen](https://linktr.ee/ikx7.a) | CC BY 4.0 License`
+As for all images that are not in assets/images were created by original artiest and studios, and are used under fair use for the purpose of review and commentary. 
+No copyright infringement is intended. If you are the original creator of any of the images used on this site and have concerns about their use, please contact us to discuss further.
+This site is not for commercial use and does not generate revenue, and all images are used solely for the purpose of providing information and entertainment to the communities.

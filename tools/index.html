@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6Z5WR106YH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6Z5WR106YH');
+    </script>
+    <meta name="google-site-verification" content="HmcKjUyHIMvD8RCWr3dxIAojKqcx5ykNgl19R19-ZQA" />
+    <meta name="robots" content="noindex, follow" />
+    <title>Anime Watch Order - Tools</title>
+    <meta name="description" content="Generate watch order JSON files for AniWatch Order.">
+    <link rel="icon" href="../assets/images/v1.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="logo">
+                    <a href="../home/index.html"><img src="../assets/images/title.png" alt="AniWatch Order" class="logo__img"></a>
+                </div>
+
+                <nav class="nav">
+                </nav>
+
+                <div class="header__actions">
+                    <div class="search-container">
+                        <input type="text" id="searchInput" class="search-input" placeholder="Search anime...">
+                        <button id="searchButton" class="search-button">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                        </button>
+                        <div id="searchSuggestions" class="search-suggestions hidden"></div>
+                    </div>
+
+                    <button id="themeToggle" class="theme-toggle">
+                        <i class="theme-icon theme-icon--light fa-solid fa-sun" aria-hidden="true"></i>
+                        <i class="theme-icon theme-icon--dark fa-solid fa-moon hidden" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <br>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <section class="page active">
+                <div class="page-header">
+                    <h2>Maintenance Tools</h2>
+                    <p>Generate <code>info.json</code> and <code>order.json</code> for a new anime entry</p>
+                </div>
+
+                <div class="tools-form" id="toolsForm">
+                    <!-- Load Existing -->
+                    <div class="tools-section">
+                        <h3 class="tools-section__title">Load Existing Series</h3>
+                        <div class="tools-row" style="align-items: flex-end;">
+                            <div class="tools-field" style="flex: 1;">
+                                <label class="tools-field__label">Select Series</label>
+                                <select class="tools-select" id="loadGuidSelect">
+                                    <option value="">— New entry —</option>
+                                </select>
+                            </div>
+                            <div class="tools-field" style="flex: 0;">
+                                <button type="button" class="btn btn--primary" id="loadGuidBtn" style="white-space: nowrap;">
+                                    <i class="fa-solid fa-folder-open"></i>&nbsp; Load
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Series Info Section -->
+                    <div class="tools-section">
+                        <h3 class="tools-section__title">Series Info</h3>
+
+                        <div class="tools-field">
+                            <label class="tools-field__label">GUID <span class="required">*</span></label>
+                            <input type="text" class="tools-input" id="fieldGuid" placeholder="e.g. tensura" required>
+                        </div>
+
+                        <div class="tools-field">
+                            <label class="tools-field__label">Title (Main) <span class="required">*</span></label>
+                            <input type="text" class="tools-input" id="fieldTitleMain" placeholder="e.g. That Time I Got Reincarnated as a Slime">
+                        </div>
+
+                        <div class="tools-field">
+                            <label class="tools-field__label">Title (Alt Names)</label>
+                            <div class="tools-dynamic-list" id="altTitlesList">
+                                <div class="tools-dynamic-row">
+                                    <input type="text" class="tools-input" placeholder="Alt title...">
+                                    <button type="button" class="tools-btn-icon tools-btn-icon--danger" data-remove-row title="Remove">×</button>
+                                </div>
+                            </div>
+                            <button type="button" class="tools-btn-icon tools-btn-icon--add" data-add-alt-title title="Add alt title" style="margin-top: var(--space-8);">+</button>
+                        </div>
+
+                        <div class="tools-field">
+                            <label class="tools-field__label">Studios</label>
+                            <div class="tools-dynamic-list" id="studiosList">
+                                <div class="tools-dynamic-row">
+                                    <input type="text" class="tools-input" placeholder="Studio name...">
+                                    <button type="button" class="tools-btn-icon tools-btn-icon--danger" data-remove-row title="Remove">×</button>
+                                </div>
+                            </div>
+                            <button type="button" class="tools-btn-icon tools-btn-icon--add" data-add-studio title="Add studio" style="margin-top: var(--space-8);">+</button>
+                        </div>
+
+                        <div class="tools-field">
+                            <label class="tools-field__label">Description</label>
+                            <textarea class="tools-textarea" id="fieldDescription" placeholder="Synopsis or description..."></textarea>
+                        </div>
+
+                        <div class="tools-row">
+                            <div class="tools-field">
+                                <label class="tools-field__label">Season</label>
+                                <select class="tools-select" id="fieldSeason">
+                                    <option value="">— Select —</option>
+                                </select>
+                            </div>
+                            <div class="tools-field">
+                                <label class="tools-field__label">Year</label>
+                                <input type="number" class="tools-input" id="fieldYear" placeholder="e.g. 2018" min="1900" max="2099">
+                            </div>
+                            <div class="tools-field">
+                                <label class="tools-field__label">Status</label>
+                                <select class="tools-select" id="fieldStatus">
+                                    <option value="">— Select —</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="tools-row">
+                            <div class="tools-field">
+                                <label class="tools-field__label">Banner Path</label>
+                                <input type="text" class="tools-input" id="fieldBanner" placeholder="/images/slug-banner.jpg">
+                            </div>
+                            <div class="tools-field">
+                                <label class="tools-field__label">Thumbnail Path</label>
+                                <input type="text" class="tools-input" id="fieldThumbnail" placeholder="/images/slug.jpg">
+                            </div>
+                        </div>
+
+                        <div class="tools-field">
+                            <label class="tools-field__label">MAL Link</label>
+                            <input type="text" class="tools-input" id="fieldMal" placeholder="https://myanimelist.net/anime/...">
+                        </div>
+
+                        <div class="tools-field">
+                            <label class="tools-field__label">Genres</label>
+                            <div class="tools-dynamic-list" id="genresList">
+                            </div>
+                            <button type="button" class="tools-btn-icon tools-btn-icon--add" data-add-genre title="Add genre" style="margin-top: var(--space-8);">+</button>
+                        </div>
+
+                        <div class="tools-field">
+                            <label class="tools-field__label">Contributors</label>
+                            <div class="tools-dynamic-list" id="contributorsList">
+                                <div class="tools-dynamic-row">
+                                    <input type="text" class="tools-input" placeholder="Contributor name..." value="Otaku-Save-Terra">
+                                    <button type="button" class="tools-btn-icon tools-btn-icon--danger" data-remove-row title="Remove">×</button>
+                                </div>
+                            </div>
+                            <button type="button" class="tools-btn-icon tools-btn-icon--add" data-add-contributor title="Add contributor" style="margin-top: var(--space-8);">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Watch Order Section -->
+                    <div class="tools-section">
+                        <h3 class="tools-section__title">Watch Order Entries</h3>
+
+                        <div class="tools-order-tabs">
+                            <button type="button" class="tools-order-tab active" data-order-tab="recommended">Recommended</button>
+                            <button type="button" class="tools-order-tab" data-order-tab="chronological">Chronological</button>
+                            <button type="button" class="tools-order-tab" data-order-tab="release">Release</button>
+                        </div>
+
+                        <div class="tools-order-panel active" id="panel-recommended">
+                            <div style="overflow-x: auto;">
+                                <table class="tools-entry-table">
+                                    <thead>
+                                        <tr>
+                                            <th class="col-title">Title</th>
+                                            <th class="col-tag">Tag</th>
+                                            <th class="col-ep">Start Ep</th>
+                                            <th class="col-time">Start Time</th>
+                                            <th class="col-ep">End Ep</th>
+                                            <th class="col-time">End Time</th>
+                                            <th class="col-remarks">Remarks</th>
+                                            <th class="col-actions"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="entries-recommended"></tbody>
+                                </table>
+                            </div>
+                            <div class="tools-add-entry-row">
+                                <button type="button" class="tools-btn-icon tools-btn-icon--add" data-add-entry="recommended" title="Add entry">+</button>
+                            </div>
+                        </div>
+
+                        <div class="tools-order-panel" id="panel-chronological">
+                            <div style="overflow-x: auto;">
+                                <table class="tools-entry-table">
+                                    <thead>
+                                        <tr>
+                                            <th class="col-title">Title</th>
+                                            <th class="col-tag">Tag</th>
+                                            <th class="col-ep">Start Ep</th>
+                                            <th class="col-time">Start Time</th>
+                                            <th class="col-ep">End Ep</th>
+                                            <th class="col-time">End Time</th>
+                                            <th class="col-remarks">Remarks</th>
+                                            <th class="col-actions"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="entries-chronological"></tbody>
+                                </table>
+                            </div>
+                            <div class="tools-add-entry-row">
+                                <button type="button" class="tools-btn-icon tools-btn-icon--add" data-add-entry="chronological" title="Add entry">+</button>
+                            </div>
+                        </div>
+
+                        <div class="tools-order-panel" id="panel-release">
+                            <div style="overflow-x: auto;">
+                                <table class="tools-entry-table">
+                                    <thead>
+                                        <tr>
+                                            <th class="col-title">Title</th>
+                                            <th class="col-tag">Tag</th>
+                                            <th class="col-ep">Start Ep</th>
+                                            <th class="col-time">Start Time</th>
+                                            <th class="col-ep">End Ep</th>
+                                            <th class="col-time">End Time</th>
+                                            <th class="col-remarks">Remarks</th>
+                                            <th class="col-actions"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="entries-release"></tbody>
+                                </table>
+                            </div>
+                            <div class="tools-add-entry-row">
+                                <button type="button" class="tools-btn-icon tools-btn-icon--add" data-add-entry="release" title="Add entry">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Generate -->
+                    <div class="tools-generate-bar">
+                        <button type="button" class="tools-btn-generate" id="generateBtn">
+                            <i class="fa-solid fa-download"></i>&nbsp; Generate JSON Files
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+    </footer>
+
+    <script src="../shared.js"></script>
+    <script src="../home/home.js"></script>
+    <script src="tools.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "genres": [
+    "Action", "Adventure", "Comedy", "Drama", "Ecchi", "Fantasy", "Horror", "Isekai",
+    "Mecha", "Music", "Mystery", "Psychological", "Romance", "Sci-Fi",
+    "Slice of Life", "Sports", "Supernatural", "Thriller"
+  ],
+  "tags": [
+    "MAIN", "OAD", "OVA", "Movie", "Special", "ONA", "Spin-Off", "Blu-ray"
+  ],
+  "statuses": [
+    "Ongoing", "Completed", "Upcoming"
+  ],
+  "seasons": [
+    "WINTER", "SPRING", "SUMMER", "FALL"
+  ]
+}

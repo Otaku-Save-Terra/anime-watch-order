@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6Z5WR106YH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6Z5WR106YH');
+    </script>
+    <meta name="google-site-verification" content="HmcKjUyHIMvD8RCWr3dxIAojKqcx5ykNgl19R19-ZQA" />
+    <link rel="canonical" href="https://otaku-save-terra.github.io/anime-watch-order/about/index.html" />
+    <title>Anime Watch Order - About</title>
+    <meta name="description" content="About AniWatch Order — a free, open-source anime watch order guide.">
+    <link rel="icon" href="../assets/images/v1.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="logo">
+                    <a href="../home/index.html"><img src="../assets/images/title.png" alt="AniWatch Order" class="logo__img"></a>
+                </div>
+
+                <nav class="nav">
+                </nav>
+
+                <div class="header__actions">
+                    <div class="search-container">
+                        <input type="text" id="searchInput" class="search-input" placeholder="Search anime...">
+                        <button id="searchButton" class="search-button">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                        </button>
+                        <div id="searchSuggestions" class="search-suggestions hidden"></div>
+                    </div>
+
+                    <button id="themeToggle" class="theme-toggle">
+                        <i class="theme-icon theme-icon--light fa-solid fa-sun" aria-hidden="true"></i>
+                        <i class="theme-icon theme-icon--dark fa-solid fa-moon hidden" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <br>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <section class="page active">
+                <div class="page-header">
+                    <img src="../assets/images/v3.png" alt="AniWatch Order" style="max-width: 160px; border-radius: var(--radius-lg); margin-bottom: var(--space-16);">
+                    <h2>About AniWatch Order</h2>
+                    <p>Your free, ad-free anime watch order guide</p>
+                </div>
+
+                <div class="about-content" style="max-width: 720px; margin: 0 auto;">
+                    <div class="detail-section" style="margin-bottom: var(--space-32);">
+                        <h3>What is AniWatch Order?</h3>
+                        <p>AniWatch Order is a free, open-source website dedicated to helping anime fans find the correct watch order for their favourite series. Many anime franchises have complex release histories — multiple seasons, OVAs, OADs, movies, and spin-offs — making it hard to know where to start or what to watch next.</p>
+                        <p>We provide curated <strong>recommended</strong>, <strong>chronological</strong>, and <strong>release</strong> watch orders so you never have to guess.</p>
+                    </div>
+
+                    <div class="detail-section" style="margin-bottom: var(--space-32);">
+                        <h3>Why?</h3>
+                        <p>Most watch-order sites are plastered with ads, pop-ups, and SEO filler. We built AniWatch Order to be <strong>completely ad-free</strong> and focused on one thing: giving you the right order, fast.</p>
+                    </div>
+
+                    <div class="detail-section" style="margin-bottom: var(--space-32);">
+                        <h3>Tech Stack</h3>
+                        <p>Built with vanilla JavaScript, HTML, and CSS — no frameworks, no build tools. Hosted on GitHub Pages. The entire site is static and loads instantly.</p>
+                        <ul style="margin-top: var(--space-8); padding-left: var(--space-20); color: var(--color-text-secondary);">
+                            <li>Dark &amp; light theme support</li>
+                            <li>Responsive design for mobile &amp; desktop</li>
+                            <li>Cookie-based progress tracking per series</li>
+                            <li>Search across all series</li>
+                        </ul>
+                    </div>
+
+                    <div class="detail-section" style="margin-bottom: var(--space-32);">
+                        <h3>Contributing</h3>
+                        <p>Want to add a watch order for a series we don't have yet? Head over to our <a href="https://github.com/Otaku-Save-Terra/anime-watch-order" target="_blank" style="color: var(--color-primary);">GitHub repository</a> and submit a pull request. You can also use our <a href="../tools/index.html" style="color: var(--color-primary);">Tools page</a> to generate the required JSON files.</p>
+                    </div>
+
+                    <div class="detail-section">
+                        <h3>License</h3>
+                        <p>AniWatch Order is open source. See the <a href="https://github.com/Otaku-Save-Terra/anime-watch-order/blob/main/LICENSE" target="_blank" style="color: var(--color-primary);">LICENSE</a> file for details.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+    </footer>
+
+    <script src="../shared.js"></script>
+    <script src="../home/home.js"></script>
+</body>
+</html>

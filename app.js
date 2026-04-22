@@ -73,6 +73,48 @@
     }
   }
 
+  // --- Cookie helpers for progress tracking ---
+
+  function getProgressCookie() {
+    try {
+      const match = document.cookie.match(/(?:^|;\s*)aniwatch_progress=([^;]*)/);
+      if (match) return JSON.parse(decodeURIComponent(match[1]));
+    } catch (_) { /* ignore */ }
+    return {};
+  }
+
+  function setProgressCookie(data) {
+    try {
+      const val = encodeURIComponent(JSON.stringify(data));
+      document.cookie = `aniwatch_progress=${val};path=/;max-age=${60 * 60 * 24 * 365};SameSite=Lax`;
+    } catch (_) { /* ignore */ }
+  }
+
+  function entryKey(entry) {
+    const t = (entry.title || '').trim();
+    const s = entry.start?.episode ?? '';
+    const e = entry.end?.episode ?? '';
+    return `${t}|${s}-${e}`;
+  }
+
+  function getCheckedKeys(guid, tab) {
+    const progress = getProgressCookie();
+    return progress[`${guid}:${tab}`] || [];
+  }
+
+  function setCheckedKey(guid, tab, key, checked) {
+    const progress = getProgressCookie();
+    const storeKey = `${guid}:${tab}`;
+    let keys = progress[storeKey] || [];
+    if (checked && !keys.includes(key)) {
+      keys.push(key);
+    } else if (!checked) {
+      keys = keys.filter((k) => k !== key);
+    }
+    progress[storeKey] = keys;
+    setProgressCookie(progress);
+  }
+
   // --- Rendering: order entries ---
 
   function formatEpisodeRange(entry) {
@@ -113,20 +155,36 @@
     return TAG_CLASS_MAP[tag.toLowerCase()] || 'watch-order-tag--special';
   }
 
-  function renderOrderEntries(entries) {
+  function renderOrderEntries(entries, guid, tab) {
     if (!Array.isArray(entries) || entries.length === 0) {
       return '<div class="watch-order-empty"><p>Coming soon.</p></div>';
     }
 
-    return entries
+    const checkedKeys = guid && tab ? getCheckedKeys(guid, tab) : [];
+
+    const toolbar = `
+      <div class="watch-order-toolbar">
+        <button class="btn btn--outline btn--sm watch-order-uncheck-all">
+          <i class="fa-solid fa-rotate-left"></i>&nbsp; Uncheck All
+        </button>
+      </div>
+    `;
+
+    const rows = entries
       .map((entry, i) => {
         const title = escapeHtml(entry.title || 'Untitled');
         const episodes = formatEpisodeRange(entry);
         const tags = Array.isArray(entry.tag) ? entry.tag : [];
         const remarks = entry.remarks ? escapeHtml(entry.remarks) : '';
+        const key = entryKey(entry);
+        const isChecked = checkedKeys.includes(key);
 
         return `
-          <div class="watch-order-entry">
+          <div class="watch-order-entry${isChecked ? ' watch-order-entry--checked' : ''}">
+            <label class="watch-order-checkbox" title="Mark as watched">
+              <input type="checkbox" class="watch-order-checkbox__input" data-entry-key="${escapeAttr(key)}" ${isChecked ? 'checked' : ''}>
+              <span class="watch-order-checkbox__box"></span>
+            </label>
             <div class="watch-order-entry__number">${i + 1}</div>
             <div class="watch-order-entry__body">
               <h4 class="watch-order-entry__title">${title}</h4>
@@ -141,11 +199,13 @@
         `;
       })
       .join('');
+
+    return toolbar + rows;
   }
 
   // --- Tab switching ---
 
-  function initTabs(orderData) {
+  function initTabs(orderData, guid) {
     const tabs = document.querySelectorAll('[data-order-tab]');
     const content = document.getElementById('watchOrderContent');
     if (!tabs.length || !content) return;
@@ -156,7 +216,7 @@
       tabs.forEach((btn) => {
         btn.classList.toggle('active', btn.getAttribute('data-order-tab') === tabName);
       });
-      content.innerHTML = renderOrderEntries(orders[tabName] || []);
+      content.innerHTML = renderOrderEntries(orders[tabName] || [], guid, tabName);
     }
 
     tabs.forEach((btn) => {
@@ -165,11 +225,41 @@
       });
     });
 
+    // Event delegation for checkboxes and uncheck-all
+    content.addEventListener('click', (e) => {
+      const uncheckBtn = e.target.closest('.watch-order-uncheck-all');
+      if (uncheckBtn) {
+        const activeTab = document.querySelector('[data-order-tab].active');
+        const tabName = activeTab ? activeTab.getAttribute('data-order-tab') : 'recommended';
+        // Clear cookie for this tab
+        const progress = getProgressCookie();
+        progress[`${guid}:${tabName}`] = [];
+        setProgressCookie(progress);
+        // Re-render
+        activate(tabName);
+      }
+    });
+
+    content.addEventListener('change', (e) => {
+      const checkbox = e.target.closest('.watch-order-checkbox__input');
+      if (!checkbox) return;
+      const key = checkbox.getAttribute('data-entry-key');
+      const activeTab = document.querySelector('[data-order-tab].active');
+      const tabName = activeTab ? activeTab.getAttribute('data-order-tab') : 'recommended';
+      const entry = checkbox.closest('.watch-order-entry');
+      if (checkbox.checked) {
+        entry?.classList.add('watch-order-entry--checked');
+      } else {
+        entry?.classList.remove('watch-order-entry--checked');
+      }
+      setCheckedKey(guid, tabName, key, checkbox.checked);
+    });
+
     // Default to recommended
     activate('recommended');
   }
 
-  // --- Theme (shared with dashboard via localStorage key) ---
+  // --- Theme (shared with home via localStorage key) ---
 
   function initTheme() {
     try {
@@ -211,10 +301,42 @@
     updateThemeIcon(nextIsDark ? 'dark' : 'light');
   }
 
+  // --- Back to Top button ---
+
+  function initBackToTop() {
+    const btn = document.createElement('button');
+    btn.className = 'back-to-top';
+    btn.innerHTML = '<i class="fa-solid fa-arrow-up"></i>';
+    btn.title = 'Back to top';
+    document.body.appendChild(btn);
+
+    window.addEventListener('scroll', () => {
+      btn.classList.toggle('visible', window.scrollY > 300);
+    }, { passive: true });
+
+    btn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // --- Contributors ---
+
+  function renderContributors(info) {
+    const contributors = Array.isArray(info.contributors) ? info.contributors : [];
+    if (!contributors.length) return;
+    const content = document.getElementById('watchOrderContent');
+    if (!content) return;
+    const el = document.createElement('p');
+    el.className = 'watch-order-contributors';
+    el.innerHTML = `<strong>Contributors:</strong> ${contributors.map(c => escapeHtml(c)).join(', ')}`;
+    content.parentElement.appendChild(el);
+  }
+
   // --- Bootstrap ---
 
   async function init() {
     initTheme();
+    initBackToTop();
 
     const themeToggle = document.getElementById('themeToggle');
     if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
@@ -233,7 +355,8 @@
       ]);
 
       renderSeriesHeader(info);
-      initTabs(order);
+      initTabs(order, guid);
+      renderContributors(info);
     } catch (err) {
       console.error('Failed to load watch order data:', err);
       const content = document.getElementById('watchOrderContent');
