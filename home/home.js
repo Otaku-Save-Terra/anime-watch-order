@@ -174,7 +174,7 @@ function createHomeDetailHtml(indexModel, info) {
             <h2 class="anime-detail__title">${title}</h2>
             ${nativeSubtitle ? `<p class="anime-detail__subtitle">${nativeSubtitle}</p>` : ''}
             <div class="anime-detail__actions">
-              <a class="btn btn--primary" href="../${escapeAttr(indexModel.guid)}/index.html">Watch Order</a>
+              <a class="btn btn--primary" href="../${escapeAttr(indexModel.guid)}/">Watch Order</a>
               ${malUrl ? `<a class="btn btn--outline" href="${escapeAttr(malUrl)}" target="_blank" rel="noopener noreferrer">MyAnimeList</a>` : ''}
             </div>
             <div class="anime-detail__stats">

@@ -48,7 +48,7 @@
       header.textContent = 'Search Results';
       subtitle.innerHTML = 'Showing results for "<strong>' + escapeHtml(activeQuery) +
         '</strong>" (' + displayModels.length + ' found) &mdash; ' +
-        '<a href="index.html" class="browse-clear-search">Clear search</a>';
+        '<a href="./" class="browse-clear-search">Clear search</a>';
     } else {
       header.textContent = 'Browse Anime';
       subtitle.textContent = 'Explore all available anime watch orders';

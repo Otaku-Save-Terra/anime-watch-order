@@ -7,14 +7,14 @@
   'use strict';
 
   var PREFIX = '../';
-  var BROWSE_URL = PREFIX + 'browse/index.html';
+  var BROWSE_URL = PREFIX + 'browse/';
   var INDEX_URL = PREFIX + 'data/index.json';
 
   var NAV_ITEMS = [
-    { page: 'home',   label: 'Home',   href: PREFIX + 'home/index.html' },
+    { page: 'home',   label: 'Home',   href: PREFIX + 'home/' },
     { page: 'browse', label: 'Browse', href: BROWSE_URL },
-    { page: 'about',  label: 'About',  href: PREFIX + 'about/index.html' },
-    { page: 'faq',    label: 'FAQ',    href: PREFIX + 'faq/index.html' },
+    { page: 'about',  label: 'About',  href: PREFIX + 'about/' },
+    { page: 'faq',    label: 'FAQ',    href: PREFIX + 'faq/' },
   ];
 
   // --- Cached search index ---
@@ -81,8 +81,8 @@
           '<div class="footer__section">' +
             '<h4>Links</h4>' +
             '<ul>' +
-              '<li><a href="' + PREFIX + 'about/index.html">About</a></li>' +
-              '<li><a href="' + PREFIX + 'faq/index.html">FAQ</a></li>' +
+              '<li><a href="' + PREFIX + 'about/">About</a></li>' +
+              '<li><a href="' + PREFIX + 'faq/">FAQ</a></li>' +
             '</ul>' +
           '</div>' +
           '<div class="footer__section">' +
