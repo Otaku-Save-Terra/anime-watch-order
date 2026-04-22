@@ -1,6 +1,6 @@
 /**
  * Shared watch-order page logic.
- * Each series page (e.g. tensura/index.html) sets `data-anime-guid` on <main>
+ * Each series page (e.g. tensura/) sets `data-anime-guid` on <main>
  * and this script loads data/{guid}/info.json + order.json to render the page.
  */
 
