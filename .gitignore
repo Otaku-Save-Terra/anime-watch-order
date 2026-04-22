@@ -25,7 +25,7 @@ Desktop.ini
 .AppleDouble
 .LSOverride
 
-# Node modules (if you add npm later)
+# Node modules
 node_modules/
 npm-debug.log
 yarn-error.log
