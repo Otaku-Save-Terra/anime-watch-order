@@ -350,6 +350,21 @@
     document.getElementById('autoThumbnailBtn').addEventListener('click', () => {
       autoFillImagePath('fieldThumbnail', '.jpg');
     });
+
+    // Split comma-separated studios into rows
+    document.getElementById('splitStudiosBtn').addEventListener('click', () => {
+      const list = document.getElementById('studiosList');
+      const firstInput = list.querySelector('.tools-dynamic-row input');
+      if (!firstInput || !firstInput.value.includes(',')) return;
+      const parts = firstInput.value.split(',').map(s => s.trim()).filter(Boolean);
+      if (parts.length < 2) return;
+      list.innerHTML = '';
+      parts.forEach(val => {
+        addDynamicRow(list, 'studio');
+        const lastInput = list.querySelector('.tools-dynamic-row:last-child input');
+        if (lastInput) lastInput.value = val;
+      });
+    });
   }
 
   /* ---------- load existing series ---------- */
