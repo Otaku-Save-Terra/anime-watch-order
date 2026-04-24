@@ -1,0 +1,39 @@
+{
+  "guid": "gabrieldropout",
+  "orders": {
+    "recommended": [
+      {
+        "title": "Gabriel DropOut",
+        "tag": [
+          "MAIN"
+        ],
+        "start": {
+          "episode": 1,
+          "time": null
+        },
+        "end": {
+          "episode": 12,
+          "time": null
+        },
+        "remarks": null
+      },
+      {
+        "title": "Gabriel Dropout OVA",
+        "tag": [
+          "OVA"
+        ],
+        "start": {
+          "episode": 1,
+          "time": null
+        },
+        "end": {
+          "episode": 2,
+          "time": null
+        },
+        "remarks": null
+      }
+    ],
+    "chronological": [],
+    "release": []
+  }
+}

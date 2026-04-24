@@ -3,7 +3,11 @@
     "guid": "tensura",
     "title": {
       "main": "That Time I Got Reincarnated as a Slime",
-      "alt": [ "転生したらスライムだった件", "Tensei Shitara Slime Datta Ken", "Tensura" ]
+      "alt": [
+        "転生したらスライムだった件",
+        "Tensei Shitara Slime Datta Ken",
+        "Tensura"
+      ]
     },
     "thumbnail": "/images/tensura.jpg"
   },
@@ -11,7 +15,11 @@
     "guid": "gup",
     "title": {
       "main": "Girls und Panzer",
-      "alt": [ "ガールズ&パンツァー", "GuP", "Garupan" ]
+      "alt": [
+        "ガールズ&パンツァー",
+        "GuP",
+        "Garupan"
+      ]
     },
     "thumbnail": "/images/gup.jpg"
   },
@@ -19,7 +27,10 @@
     "guid": "yurucamp",
     "title": {
       "main": "Yuru Camp",
-      "alt": [ "ゆるキャン△", "Laid-Back Camp" ]
+      "alt": [
+        "ゆるキャン△",
+        "Laid-Back Camp"
+      ]
     },
     "thumbnail": "/images/yurucamp.jpg"
   },
@@ -27,7 +38,11 @@
     "guid": "shokugeki",
     "title": {
       "main": "Food Wars! Shokugeki no Soma",
-      "alt": [ "食戟のソーマ", "Shokugeki no Souma", "Food Wars" ]
+      "alt": [
+        "食戟のソーマ",
+        "Shokugeki no Souma",
+        "Food Wars"
+      ]
     },
     "thumbnail": "/images/shokugeki.jpg"
   },
@@ -35,7 +50,10 @@
     "guid": "nonbirinouka",
     "title": {
       "main": "Farming Life in Another World",
-      "alt": [ "異世界のんびり農家", "Isekai Nonbiri Nouka" ]
+      "alt": [
+        "異世界のんびり農家",
+        "Isekai Nonbiri Nouka"
+      ]
     },
     "thumbnail": "/images/nonbirinouka.jpg"
   },
@@ -43,8 +61,22 @@
     "guid": "drstone",
     "title": {
       "main": "Dr. Stone",
-      "alt": [ "ドクターストーン", "Dokuta Suton" ]
+      "alt": [
+        "ドクターストーン",
+        "Dokuta Suton"
+      ]
     },
     "thumbnail": "/images/drstone.jpg"
+  },
+  {
+    "guid": "gabrieldropout",
+    "title": {
+      "main": "Gabriel DropOut",
+      "alt": [
+        "ガヴリールドロップアウト",
+        "GabuDoro"
+      ]
+    },
+    "thumbnail": "/images/gabrieldropout.jpg"
   }
 ]

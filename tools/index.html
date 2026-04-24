@@ -15,6 +15,18 @@
     <meta name="robots" content="noindex, follow" />
     <title>Anime Watch Order - Tools</title>
     <meta name="description" content="Generate watch order JSON files for AniWatch Order.">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Anime Watch Order - Tools">
+    <meta property="og:description" content="Generate watch order JSON files for AniWatch Order.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://otaku-save-terra.github.io/anime-watch-order/tools/">
+    <meta property="og:site_name" content="AniWatch Order">
+    <meta property="og:image" content="https://otaku-save-terra.github.io/anime-watch-order/assets/images/v3.png">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Anime Watch Order - Tools">
+    <meta name="twitter:description" content="Generate watch order JSON files for AniWatch Order.">
+    <meta name="twitter:image" content="https://otaku-save-terra.github.io/anime-watch-order/assets/images/v3.png">
     <link rel="icon" href="../assets/images/v1.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="../style.css">
@@ -116,6 +128,9 @@
                                 </div>
                             </div>
                             <button type="button" class="tools-btn-icon tools-btn-icon--add" data-add-studio title="Add studio" style="margin-top: var(--space-8);">+</button>
+                            <button type="button" class="btn btn--outline btn--sm" id="splitStudiosBtn" title="Split comma-separated text into rows" style="margin-top: var(--space-8); margin-left: var(--space-8);">
+                                <i class="fa-solid fa-scissors"></i>&nbsp; Split
+                            </button>
                         </div>
 
                         <div class="tools-field">
@@ -145,11 +160,21 @@
                         <div class="tools-row">
                             <div class="tools-field">
                                 <label class="tools-field__label">Banner Path</label>
-                                <input type="text" class="tools-input" id="fieldBanner" placeholder="/images/slug-banner.jpg">
+                                <div class="tools-dynamic-row">
+                                    <input type="text" class="tools-input" id="fieldBanner" placeholder="/images/slug-banner.jpg" readonly>
+                                    <button type="button" class="btn btn--outline btn--sm" id="autoBannerBtn" title="Auto-fill from GUID">
+                                        <i class="fa-solid fa-wand-magic-sparkles"></i>&nbsp; Auto
+                                    </button>
+                                </div>
                             </div>
                             <div class="tools-field">
                                 <label class="tools-field__label">Thumbnail Path</label>
-                                <input type="text" class="tools-input" id="fieldThumbnail" placeholder="/images/slug.jpg">
+                                <div class="tools-dynamic-row">
+                                    <input type="text" class="tools-input" id="fieldThumbnail" placeholder="/images/slug.jpg" readonly>
+                                    <button type="button" class="btn btn--outline btn--sm" id="autoThumbnailBtn" title="Auto-fill from GUID">
+                                        <i class="fa-solid fa-wand-magic-sparkles"></i>&nbsp; Auto
+                                    </button>
+                                </div>
                             </div>
                         </div>
 
@@ -192,6 +217,7 @@
                                 <table class="tools-entry-table">
                                     <thead>
                                         <tr>
+                                            <th class="col-move"></th>
                                             <th class="col-title">Title</th>
                                             <th class="col-tag">Tag</th>
                                             <th class="col-ep">Start Ep</th>
@@ -215,6 +241,7 @@
                                 <table class="tools-entry-table">
                                     <thead>
                                         <tr>
+                                            <th class="col-move"></th>
                                             <th class="col-title">Title</th>
                                             <th class="col-tag">Tag</th>
                                             <th class="col-ep">Start Ep</th>
@@ -238,6 +265,7 @@
                                 <table class="tools-entry-table">
                                     <thead>
                                         <tr>
+                                            <th class="col-move"></th>
                                             <th class="col-title">Title</th>
                                             <th class="col-tag">Tag</th>
                                             <th class="col-ep">Start Ep</th>
