@@ -15,6 +15,18 @@
     <link rel="canonical" href="https://otaku-save-terra.github.io/anime-watch-order/faq/" />
     <title>Anime Watch Order - FAQ</title>
     <meta name="description" content="Frequently asked questions about AniWatch Order.">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Anime Watch Order - FAQ">
+    <meta property="og:description" content="Frequently asked questions about AniWatch Order.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://otaku-save-terra.github.io/anime-watch-order/faq/">
+    <meta property="og:site_name" content="AniWatch Order">
+    <meta property="og:image" content="https://otaku-save-terra.github.io/anime-watch-order/assets/images/v3.png">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Anime Watch Order - FAQ">
+    <meta name="twitter:description" content="Frequently asked questions about AniWatch Order.">
+    <meta name="twitter:image" content="https://otaku-save-terra.github.io/anime-watch-order/assets/images/v3.png">
     <link rel="icon" href="../assets/images/v1.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="../style.css">
@@ -59,7 +71,7 @@
         <div class="container">
             <section class="page active">
                 <div class="page-header">
-                    <h2>Frequently Asked Questions</h2>
+                    <h1>Frequently Asked Questions</h1>
                     <p>Common questions about AniWatch Order</p>
                 </div>
 
@@ -123,6 +135,71 @@
     <footer class="footer">
     </footer>
 
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is the difference between Recommended, Chronological, and Release order?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Recommended is the order we suggest for the best viewing experience — it may interleave OVAs and specials at the right story points. Chronological follows the in-universe timeline of events. Release Order is the order each entry aired or was published."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do I need to watch OVAs and specials?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "It depends on the series. Some OVAs are standalone fun episodes, while others contain important plot points. Our recommended order includes them where they matter most. Entries tagged as optional will be noted in the remarks."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How does the progress checkbox work?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Each entry in a watch order has a checkbox you can tick to mark it as watched. Your progress is saved in a browser cookie, so it persists across sessions. It tracks your progress per series and per order tab (recommended, chronological, release)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How can I add a new anime watch order?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "You can use our Tools page to generate the required JSON files (info.json and order.json), then submit a pull request to our GitHub repository."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Why is a series missing?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We add series over time based on community demand. If you'd like to see a specific anime, open an issue on GitHub or contribute the watch order yourself!"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is this site free? Are there ads?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, completely free and ad-free. Always. The site is open source and hosted on GitHub Pages at zero cost."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does this site stream anime?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. AniWatch Order only provides watch order guides. We do not host, stream, or link to any anime content. Please use legal streaming services to watch anime."
+                }
+            }
+        ]
+    }
+    </script>
     <script src="../shared.js"></script>
     <script src="../home/home.js"></script>
 </body>

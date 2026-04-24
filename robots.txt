@@ -2,9 +2,7 @@ User-agent: *
 Allow: /
 
 # Block non-content directories from crawling
-Disallow: /data/
 Disallow: /tools/
-Disallow: /assets/
 Disallow: /.github/
 
 Sitemap: https://otaku-save-terra.github.io/anime-watch-order/sitemap.xml

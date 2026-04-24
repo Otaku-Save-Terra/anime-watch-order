@@ -98,12 +98,14 @@ function generatePage(guid) {
     }
 
     // --- 3. Update sitemap.xml ---
-    const pageUrl = `${BASE_URL}/${guid}/index.html`;
+    const pageUrl = `${BASE_URL}/${guid}/`;
+    const today = new Date().toISOString().slice(0, 10);
     let sitemap = fs.readFileSync(SITEMAP_PATH, 'utf-8');
     if (!sitemap.includes(pageUrl)) {
         const newEntry = [
             '  <url>',
             `    <loc>${pageUrl}</loc>`,
+            `    <lastmod>${today}</lastmod>`,
             '    <priority>0.9</priority>',
             '    <changefreq>weekly</changefreq>',
             '  </url>'
@@ -112,7 +114,17 @@ function generatePage(guid) {
         fs.writeFileSync(SITEMAP_PATH, sitemap, 'utf-8');
         console.log(`Added ${guid} to sitemap.xml`);
     } else {
-        console.log(`${guid} already in sitemap.xml — skipped`);
+        // Update lastmod for existing entry
+        const lastmodRegex = new RegExp(
+            `(<loc>${pageUrl.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}</loc>\\s*<lastmod>)\\d{4}-\\d{2}-\\d{2}(</lastmod>)`
+        );
+        if (lastmodRegex.test(sitemap)) {
+            sitemap = sitemap.replace(lastmodRegex, `$1${today}$2`);
+            fs.writeFileSync(SITEMAP_PATH, sitemap, 'utf-8');
+            console.log(`Updated ${guid} lastmod in sitemap.xml`);
+        } else {
+            console.log(`${guid} already in sitemap.xml — skipped`);
+        }
     }
 
     console.log('\nDone! Summary:');
