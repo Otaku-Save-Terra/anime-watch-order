@@ -11,7 +11,7 @@
  *   1. Reads data/{guid}/info.json
  *   2. Adds the series to data/index.json (if not already there)
  *   3. Creates {guid}/index.html from tools/template.html
- *   4. Adds the page to sitemap.xml
+ *   4. Adds the page to sitemap_index.xml
  */
 
 const fs = require('fs');
@@ -22,7 +22,7 @@ const ROOT = path.resolve(__dirname, '..');
 const DATA_DIR = path.join(ROOT, 'data');
 const TEMPLATE_PATH = path.join(ROOT, 'tools', 'template.html');
 const INDEX_JSON_PATH = path.join(DATA_DIR, 'index.json');
-const SITEMAP_PATH = path.join(ROOT, 'sitemap.xml');
+const SITEMAP_PATH = path.join(ROOT, 'sitemap_index.xml');
 const BASE_URL = 'https://otaku-save-terra.github.io/anime-watch-order';
 
 function getAvailableGuids() {
@@ -97,7 +97,7 @@ function generatePage(guid) {
         console.log(`"${titleMain}" already in data/index.json — skipped`);
     }
 
-    // --- 3. Update sitemap.xml ---
+    // --- 3. Update sitemap_index.xml ---
     const pageUrl = `${BASE_URL}/${guid}/`;
     const today = new Date().toISOString().slice(0, 10);
     let sitemap = fs.readFileSync(SITEMAP_PATH, 'utf-8');
@@ -112,7 +112,7 @@ function generatePage(guid) {
         ].join('\n');
         sitemap = sitemap.replace('</urlset>', newEntry + '\n</urlset>');
         fs.writeFileSync(SITEMAP_PATH, sitemap, 'utf-8');
-        console.log(`Added ${guid} to sitemap.xml`);
+        console.log(`Added ${guid} to sitemap_index.xml`);
     } else {
         // Update lastmod for existing entry
         const lastmodRegex = new RegExp(
@@ -121,9 +121,9 @@ function generatePage(guid) {
         if (lastmodRegex.test(sitemap)) {
             sitemap = sitemap.replace(lastmodRegex, `$1${today}$2`);
             fs.writeFileSync(SITEMAP_PATH, sitemap, 'utf-8');
-            console.log(`Updated ${guid} lastmod in sitemap.xml`);
+            console.log(`Updated ${guid} lastmod in sitemap_index.xml`);
         } else {
-            console.log(`${guid} already in sitemap.xml — skipped`);
+            console.log(`${guid} already in sitemap_index.xml — skipped`);
         }
     }
 

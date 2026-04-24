@@ -5,4 +5,4 @@ Allow: /
 Disallow: /tools/
 Disallow: /.github/
 
-Sitemap: https://otaku-save-terra.github.io/anime-watch-order/sitemap.xml
+Sitemap: https://otaku-save-terra.github.io/anime-watch-order/sitemap_index.xml

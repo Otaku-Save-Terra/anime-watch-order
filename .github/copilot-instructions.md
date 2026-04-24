@@ -46,7 +46,7 @@ This is the most common contribution workflow:
 3. **Generate the page**: `node tools/generate-page.js <guid>`
    - Creates `{guid}/index.html` from `tools/template.html`
    - Adds the series to `data/index.json`
-   - Adds the URL to `sitemap.xml` (with `<lastmod>` set to today; updates `<lastmod>` on regeneration)
+   - Adds the URL to `sitemap_index.xml` (with `<lastmod>` set to today; updates `<lastmod>` on regeneration)
 
 The template uses `{{GUID}}`, `{{TITLE_MAIN}}`, and `{{TITLE_SHORT}}` placeholders.
 
@@ -105,4 +105,4 @@ Valid tags: `MAIN`, `OAD`, `OVA`, `Movie`, `Special`, `ONA`, `Spin-Off`, `Blu-ra
 - **Theme persistence**: Stored in `localStorage` under the key `aniclone_user` → `preferences.theme` (`"dark"` | `"light"` | `"auto"`). Applied via `data-color-scheme` attribute on `<html>`.
 - **Progress tracking**: Per-series checkbox state stored in the `aniwatch_progress` cookie, keyed by `{guid}:{tab}`.
 - **Image paths**: Data files use site-root paths (e.g., `/images/tensura.jpg`). JS resolves them to relative paths at runtime by stripping the leading `/` and prepending `../`.
-- **SEO**: Each series page has Open Graph, Twitter Card, and canonical meta tags. The `tools/template.html` generates these automatically. Keep `sitemap.xml` and `robots.txt` in sync when adding pages.
+- **SEO**: Each series page has Open Graph, Twitter Card, and canonical meta tags. The `tools/template.html` generates these automatically. Keep `sitemap_index.xml` and `robots.txt` in sync when adding pages.

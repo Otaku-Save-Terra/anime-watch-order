@@ -9,7 +9,8 @@
 
 ## Contributing
 
-Want to help add a new series? A tutorial will be added soon and Wiki.
+Want to help add a new series? Check out our [Wiki](https://github.com/Otaku-Save-Terra/anime-watch-order/wiki)
+or join our official Reddit community at [r/AniWatchOrder](https://www.reddit.com/r/AniWatchOrder/).
 
 ## About
 
@@ -21,7 +22,7 @@ AniWatch Order helps anime fans find the correct watch order for complex franchi
 - ✅ Cookie-based progress tracking per series
 - 🔍 Search across all series
 - 📦 No frameworks — vanilla JS, HTML, CSS
-- 📊 Google Analytics is used to check which anime is popular and how users find this page. Data is collected anonymously only for counting purpose.
+- 📊 Google Analytics is used to check which anime is popular and how users find this page only. Data is collected anonymously only for counting purpose.
 
 ### Data Structure
 
@@ -39,9 +40,8 @@ The site is deployed to GitHub Pages automatically on push to `main` via the wor
 ## Note
 
 The original images under assets/images were created and under CC BY 4.0.
-If all images have been replaced with custom ones, no attribution is required for the images.
 
-As for all images that are not in assets/images were created by their original artist or studio, and are used under fair use for the purpose of review and commentary. 
+As for all images that are not in assets/images were created by their original author, artist or studio, and are used under fair use for the purpose of review and commentary. 
 No copyright infringement is intended. If you are the original creator of any of the images used on this site and have concerns about their use, please contact us to discuss further.
 This site is not for commercial use and does not generate revenue, and all images are used solely for the purpose of providing information and entertainment to the communities.
 
