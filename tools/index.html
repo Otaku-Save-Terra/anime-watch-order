@@ -157,11 +157,21 @@
                         <div class="tools-row">
                             <div class="tools-field">
                                 <label class="tools-field__label">Banner Path</label>
-                                <input type="text" class="tools-input" id="fieldBanner" placeholder="/images/slug-banner.jpg">
+                                <div class="tools-dynamic-row">
+                                    <input type="text" class="tools-input" id="fieldBanner" placeholder="/images/slug-banner.jpg" readonly>
+                                    <button type="button" class="btn btn--outline btn--sm" id="autoBannerBtn" title="Auto-fill from GUID">
+                                        <i class="fa-solid fa-wand-magic-sparkles"></i>&nbsp; Auto
+                                    </button>
+                                </div>
                             </div>
                             <div class="tools-field">
                                 <label class="tools-field__label">Thumbnail Path</label>
-                                <input type="text" class="tools-input" id="fieldThumbnail" placeholder="/images/slug.jpg">
+                                <div class="tools-dynamic-row">
+                                    <input type="text" class="tools-input" id="fieldThumbnail" placeholder="/images/slug.jpg" readonly>
+                                    <button type="button" class="btn btn--outline btn--sm" id="autoThumbnailBtn" title="Auto-fill from GUID">
+                                        <i class="fa-solid fa-wand-magic-sparkles"></i>&nbsp; Auto
+                                    </button>
+                                </div>
                             </div>
                         </div>
 
@@ -204,6 +214,7 @@
                                 <table class="tools-entry-table">
                                     <thead>
                                         <tr>
+                                            <th class="col-move"></th>
                                             <th class="col-title">Title</th>
                                             <th class="col-tag">Tag</th>
                                             <th class="col-ep">Start Ep</th>
@@ -227,6 +238,7 @@
                                 <table class="tools-entry-table">
                                     <thead>
                                         <tr>
+                                            <th class="col-move"></th>
                                             <th class="col-title">Title</th>
                                             <th class="col-tag">Tag</th>
                                             <th class="col-ep">Start Ep</th>
@@ -250,6 +262,7 @@
                                 <table class="tools-entry-table">
                                     <thead>
                                         <tr>
+                                            <th class="col-move"></th>
                                             <th class="col-title">Title</th>
                                             <th class="col-tag">Tag</th>
                                             <th class="col-ep">Start Ep</th>

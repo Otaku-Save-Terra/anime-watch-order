@@ -88,6 +88,7 @@
   function createEntryRow() {
     const tr = document.createElement('tr');
     tr.innerHTML = `
+      <td class="col-move" draggable="true"><span class="drag-handle" title="Drag to reorder">⠿</span></td>
       <td class="col-title"><input type="text" class="tools-input" data-field="title" placeholder="Title"></td>
       <td class="col-tag"></td>
       <td class="col-ep"><input type="text" class="tools-input" data-field="startEp" placeholder="1"></td>
@@ -155,6 +156,45 @@
         tab.classList.add('active');
         document.getElementById('panel-' + tab.dataset.orderTab).classList.add('active');
       });
+    });
+  }
+
+  /* ---------- drag-to-reorder rows ---------- */
+  function initDragReorder() {
+    let dragRow = null;
+
+    document.addEventListener('dragstart', (e) => {
+      const handle = e.target.closest('.col-move');
+      if (!handle) return;
+      dragRow = handle.closest('tr');
+      if (!dragRow) return;
+      dragRow.classList.add('drag-row--dragging');
+      e.dataTransfer.effectAllowed = 'move';
+      e.dataTransfer.setData('text/plain', '');
+    });
+
+    document.addEventListener('dragover', (e) => {
+      if (!dragRow) return;
+      const targetRow = e.target.closest('.tools-entry-table tbody tr');
+      if (!targetRow || targetRow === dragRow) return;
+      e.preventDefault();
+      e.dataTransfer.dropEffect = 'move';
+      const tbody = targetRow.parentNode;
+      const rows = [...tbody.children];
+      const dragIdx = rows.indexOf(dragRow);
+      const targetIdx = rows.indexOf(targetRow);
+      if (dragIdx < targetIdx) {
+        tbody.insertBefore(dragRow, targetRow.nextElementSibling);
+      } else {
+        tbody.insertBefore(dragRow, targetRow);
+      }
+    });
+
+    document.addEventListener('dragend', () => {
+      if (dragRow) {
+        dragRow.classList.remove('drag-row--dragging');
+        dragRow = null;
+      }
     });
   }
 
@@ -291,6 +331,25 @@
     });
 
     document.getElementById('generateBtn').addEventListener('click', generateJSON);
+
+    // Auto-fill image paths from GUID
+    function autoFillImagePath(fieldId, suffix) {
+      const guid = document.getElementById('fieldGuid').value.trim();
+      if (!guid) {
+        alert('Enter a GUID first.');
+        document.getElementById('fieldGuid').focus();
+        return;
+      }
+      document.getElementById(fieldId).value = `/images/${guid}${suffix}`;
+    }
+
+    document.getElementById('autoBannerBtn').addEventListener('click', () => {
+      autoFillImagePath('fieldBanner', '-banner.jpg');
+    });
+
+    document.getElementById('autoThumbnailBtn').addEventListener('click', () => {
+      autoFillImagePath('fieldThumbnail', '.jpg');
+    });
   }
 
   /* ---------- load existing series ---------- */
@@ -445,6 +504,7 @@
     rebuildStaticDropdowns();
     addDynamicRow(document.getElementById('genresList'), 'genre');
     initOrderTabs();
+    initDragReorder();
     initEvents();
     populateGuidDropdown();
     // start with one empty entry per tab

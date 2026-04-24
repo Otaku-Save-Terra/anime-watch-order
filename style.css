@@ -2788,6 +2788,27 @@ button:focus-visible,
   text-align: center;
 }
 
+.tools-entry-table .col-move {
+  width: 28px;
+  text-align: center;
+  cursor: grab;
+}
+
+.tools-entry-table .col-move:active {
+  cursor: grabbing;
+}
+
+.tools-entry-table .drag-handle {
+  font-size: 1rem;
+  color: var(--color-text-secondary, #999);
+  user-select: none;
+  letter-spacing: -1px;
+}
+
+.tools-entry-table .drag-row--dragging {
+  opacity: 0.4;
+}
+
 .tools-entry-table tr:hover td {
   background: var(--color-bg-tertiary, rgba(0,0,0,0.02));
 }
