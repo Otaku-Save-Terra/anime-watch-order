@@ -78,5 +78,15 @@
       ]
     },
     "thumbnail": "/images/gabrieldropout.jpg"
+  },
+  {
+    "guid": "horimiya",
+    "title": {
+      "main": "Horimiya",
+      "alt": [
+        "ホリミヤ"
+      ]
+    },
+    "thumbnail": "/images/horimiya.jpg"
   }
 ]

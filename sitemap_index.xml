@@ -66,4 +66,10 @@
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
+  <url>
+    <loc>https://otaku-save-terra.github.io/anime-watch-order/horimiya/</loc>
+    <lastmod>2026-05-08</lastmod>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
 </urlset>

@@ -1,0 +1,822 @@
+{
+  "guid": "horimiya",
+  "orders": {
+    "recommended": [
+      {
+        "title": "Horimiya",
+        "tag": [
+          "MAIN"
+        ],
+        "start": {
+          "episode": 1,
+          "time": "0:00"
+        },
+        "end": {
+          "episode": 2,
+          "time": "9:30"
+        },
+        "remarks": null
+      },
+      {
+        "title": "Horimiya: The Missing Pieces",
+        "tag": [
+          "Spin-Off"
+        ],
+        "start": {
+          "episode": 1,
+          "time": null
+        },
+        "end": {
+          "episode": 1,
+          "time": "11:00"
+        },
+        "remarks": "From opening"
+      },
+      {
+        "title": "Horimiya",
+        "tag": [
+          "MAIN"
+        ],
+        "start": {
+          "episode": 2,
+          "time": "9:30"
+        },
+        "end": {
+          "episode": 6,
+          "time": null
+        },
+        "remarks": null
+      },
+      {
+        "title": "Horimiya: The Missing Pieces",
+        "tag": [
+          "Spin-Off"
+        ],
+        "start": {
+          "episode": 1,
+          "time": "11:00"
+        },
+        "end": {
+          "episode": 1,
+          "time": "15:00"
+        },
+        "remarks": null
+      },
+      {
+        "title": "Horimiya",
+        "tag": [
+          "MAIN"
+        ],
+        "start": {
+          "episode": 7,
+          "time": "0:00"
+        },
+        "end": {
+          "episode": 8,
+          "time": null
+        },
+        "remarks": "To opening"
+      },
+      {
+        "title": "Horimiya",
+        "tag": [
+          "MAIN"
+        ],
+        "start": {
+          "episode": 9,
+          "time": "0:00"
+        },
+        "end": {
+          "episode": 9,
+          "time": "6:15"
+        },
+        "remarks": null
+      },
+      {
+        "title": "Horimiya",
+        "tag": [
+          "MAIN"
+        ],
+        "start": {
+          "episode": 8,
+          "time": "0:00"
+        },
+        "end": {
+          "episode": 8,
+          "time": "5:12"
+        },
+        "remarks": null
+      },
+      {
+        "title": "Horimiya: The Missing Pieces",
+        "tag": [
+          "Spin-Off"
+        ],
+        "start": {
+          "episode": 1,
+          "time": "15:00"
+        },
+        "end": null,
+        "remarks": null
+      },
+      {
+        "title": "Horimiya",
+        "tag": [
+          "MAIN"
+        ],
+        "start": {
+          "episode": 8,
+          "time": "12:13"
+        },
+        "end": null,
+        "remarks": null
+      },
+      {
+        "title": "Horimiya",
+        "tag": [
+          "MAIN"
+        ],
+        "start": {
+          "episode": 9,
+          "time": "6:15"
+        },
+        "end": {
+          "episode": 9,
+          "time": "11:42"
+        },
+        "remarks": null
+      },
+      {
+        "title": "Horimiya: The Missing Pieces",
+        "tag": [
+          "Spin-Off"
+        ],
+        "start": {
+          "episode": 2,
+          "time": "0:00"
+        },
+        "end": {
+          "episode": 3,
+          "time": null
+        },
+        "remarks": null
+      },
+      {
+        "title": "Horimiya",
+        "tag": [
+          "MAIN"
+        ],
+        "start": {
+          "episode": 9,
+          "time": "11:42"
+        },
+        "end": null,
+        "remarks": null
+      },
+      {
+        "title": "Horimiya: The Missing Pieces",
+        "tag": [
+          "Spin-Off"
+        ],
+        "start": {
+          "episode": 4,
+          "time": "0:00"
+        },
+        "end": {
+          "episode": 4,
+          "time": "8:39"
+        },
+        "remarks": null
+      },
+      {
+        "title": "Horimiya: The Missing Pieces",
+        "tag": [
+          "Spin-Off"
+        ],
+        "start": {
+          "episode": 4,
+          "time": "20:28"
+        },
+        "end": null,
+        "remarks": null
+      },
+      {
+        "title": "Horimiya",
+        "tag": [
+          "MAIN"
+        ],
+        "start": {
+          "episode": 10,
+          "time": null
+        },
+        "end": {
+          "episode": 10,
+          "time": "18:56"
+        },
+        "remarks": "From Opening"
+      },
+      {
+        "title": "Horimiya",
+        "tag": [
+          "MAIN"
+        ],
+        "start": {
+          "episode": 10,
+          "time": "0:00"
+        },
+        "end": null,
+        "remarks": "To Opening"
+      },
+      {
+        "title": "Horimiya: The Missing Pieces",
+        "tag": [
+          "Spin-Off"
+        ],
+        "start": {
+          "episode": 4,
+          "time": "8:39"
+        },
+        "end": {
+          "episode": 4,
+          "time": "11:51"
+        },
+        "remarks": null
+      },
+      {
+        "title": "Horimiya",
+        "tag": [
+          "MAIN"
+        ],
+        "start": {
+          "episode": 10,
+          "time": "18:56"
+        },
+        "end": null,
+        "remarks": null
+      },
+      {
+        "title": "Horimiya: The Missing Pieces",
+        "tag": [
+          "Spin-Off"
+        ],
+        "start": {
+          "episode": 4,
+          "time": "11:51"
+        },
+        "end": {
+          "episode": 4,
+          "time": "14:17"
+        },
+        "remarks": null
+      },
+      {
+        "title": "Horimiya",
+        "tag": [
+          "MAIN"
+        ],
+        "start": {
+          "episode": 12,
+          "time": "0:00"
+        },
+        "end": null,
+        "remarks": "To Opening"
+      },
+      {
+        "title": "Horimiya",
+        "tag": [
+          "MAIN"
+        ],
+        "start": {
+          "episode": 12,
+          "time": "10:15"
+        },
+        "end": null,
+        "remarks": null
+      },
+      {
+        "title": "Horimiya: The Missing Pieces",
+        "tag": [
+          "Spin-Off"
+        ],
+        "start": {
+          "episode": 8,
+          "time": "0:00"
+        },
+        "end": null,
+        "remarks": "To Opening"
+      },
+      {
+        "title": "Horimiya: The Missing Pieces",
+        "tag": [
+          "Spin-Off"
+        ],
+        "start": {
+          "episode": 7,
+          "time": "12:31"
+        },
+        "end": {
+          "episode": 7,
+          "time": "15:09"
+        },
+        "remarks": null
+      },
+      {
+        "title": "Horimiya: The Missing Pieces",
+        "tag": [
+          "Spin-Off"
+        ],
+        "start": {
+          "episode": 4,
+          "time": "14:17"
+        },
+        "end": {
+          "episode": 4,
+          "time": "20:18"
+        },
+        "remarks": null
+      },
+      {
+        "title": "Horimiya: The Missing Pieces",
+        "tag": [
+          "Spin-Off"
+        ],
+        "start": {
+          "episode": 9,
+          "time": "16:41"
+        },
+        "end": null,
+        "remarks": null
+      },
+      {
+        "title": "Horimiya",
+        "tag": [
+          "MAIN"
+        ],
+        "start": {
+          "episode": 8,
+          "time": "5:12"
+        },
+        "end": {
+          "episode": 9,
+          "time": "12:13"
+        },
+        "remarks": null
+      },
+      {
+        "title": "Horimiya: The Missing Pieces",
+        "tag": [
+          "Spin-Off"
+        ],
+        "start": {
+          "episode": 6,
+          "time": "0:00"
+        },
+        "end": {
+          "episode": 6,
+          "time": "10:27"
+        },
+        "remarks": null
+      },
+      {
+        "title": "Horimiya",
+        "tag": [
+          "MAIN"
+        ],
+        "start": {
+          "episode": 12,
+          "time": null
+        },
+        "end": {
+          "episode": 12,
+          "time": "10:15"
+        },
+        "remarks": "From Opening"
+      },
+      {
+        "title": "Horimiya: The Missing Pieces",
+        "tag": [
+          "Spin-Off"
+        ],
+        "start": {
+          "episode": 10,
+          "time": "0:00"
+        },
+        "end": {
+          "episode": 10,
+          "time": "7:01"
+        },
+        "remarks": null
+      },
+      {
+        "title": "Horimiya",
+        "tag": [
+          "MAIN"
+        ],
+        "start": {
+          "episode": 11,
+          "time": null
+        },
+        "end": {
+          "episode": 11,
+          "time": "7:58"
+        },
+        "remarks": "From Opening"
+      },
+      {
+        "title": "Horimiya: The Missing Pieces",
+        "tag": [
+          "Spin-Off"
+        ],
+        "start": {
+          "episode": 5,
+          "time": "0:00"
+        },
+        "end": {
+          "episode": 5,
+          "time": "6:59"
+        },
+        "remarks": null
+      },
+      {
+        "title": "Horimiya: The Missing Pieces",
+        "tag": [
+          "Spin-Off"
+        ],
+        "start": {
+          "episode": 10,
+          "time": "7:02"
+        },
+        "end": {
+          "episode": 10,
+          "time": "10:30"
+        },
+        "remarks": null
+      },
+      {
+        "title": "Horimiya: The Missing Pieces",
+        "tag": [
+          "Spin-Off"
+        ],
+        "start": {
+          "episode": 6,
+          "time": "10:27"
+        },
+        "end": {
+          "episode": 6,
+          "time": "13:14"
+        },
+        "remarks": null
+      },
+      {
+        "title": "Horimiya: The Missing Pieces",
+        "tag": [
+          "Spin-Off"
+        ],
+        "start": {
+          "episode": 13,
+          "time": "0:00"
+        },
+        "end": {
+          "episode": 13,
+          "time": "6:32"
+        },
+        "remarks": null
+      },
+      {
+        "title": "Horimiya: The Missing Pieces",
+        "tag": [
+          "Spin-Off"
+        ],
+        "start": {
+          "episode": 10,
+          "time": "10:31"
+        },
+        "end": {
+          "episode": 10,
+          "time": "17:08"
+        },
+        "remarks": null
+      },
+      {
+        "title": "Horimiya: The Missing Pieces",
+        "tag": [
+          "Spin-Off"
+        ],
+        "start": {
+          "episode": 8,
+          "time": "2:57"
+        },
+        "end": {
+          "episode": 8,
+          "time": "13:24"
+        },
+        "remarks": null
+      },
+      {
+        "title": "Horimiya: The Missing Pieces",
+        "tag": [
+          "Spin-Off"
+        ],
+        "start": {
+          "episode": 7,
+          "time": "0:00"
+        },
+        "end": {
+          "episode": 7,
+          "time": "8:02"
+        },
+        "remarks": null
+      },
+      {
+        "title": "Horimiya: The Missing Pieces",
+        "tag": [
+          "Spin-Off"
+        ],
+        "start": {
+          "episode": 8,
+          "time": "13:25"
+        },
+        "end": {
+          "episode": 8,
+          "time": "17:52"
+        },
+        "remarks": null
+      },
+      {
+        "title": "Horimiya",
+        "tag": [
+          "MAIN"
+        ],
+        "start": {
+          "episode": 11,
+          "time": "7:58"
+        },
+        "end": {
+          "episode": 11,
+          "time": "9:00"
+        },
+        "remarks": null
+      },
+      {
+        "title": "Horimiya",
+        "tag": [
+          "MAIN"
+        ],
+        "start": {
+          "episode": 11,
+          "time": "14:05"
+        },
+        "end": null,
+        "remarks": null
+      },
+      {
+        "title": "Horimiya: The Missing Pieces",
+        "tag": [
+          "Spin-Off"
+        ],
+        "start": {
+          "episode": 5,
+          "time": "6:59"
+        },
+        "end": null,
+        "remarks": null
+      },
+      {
+        "title": "Horimiya: The Missing Pieces",
+        "tag": [
+          "Spin-Off"
+        ],
+        "start": {
+          "episode": 6,
+          "time": "16:37"
+        },
+        "end": null,
+        "remarks": null
+      },
+      {
+        "title": "Horimiya: The Missing Pieces",
+        "tag": [
+          "Spin-Off"
+        ],
+        "start": {
+          "episode": 6,
+          "time": "13:14"
+        },
+        "end": {
+          "episode": 6,
+          "time": "16:37"
+        },
+        "remarks": null
+      },
+      {
+        "title": "Horimiya: The Missing Pieces",
+        "tag": [
+          "Spin-Off"
+        ],
+        "start": {
+          "episode": 12,
+          "time": null
+        },
+        "end": {
+          "episode": 12,
+          "time": "11:25"
+        },
+        "remarks": "From Opening"
+      },
+      {
+        "title": "Horimiya: The Missing Pieces",
+        "tag": [
+          "Spin-Off"
+        ],
+        "start": {
+          "episode": 12,
+          "time": "13:58"
+        },
+        "end": {
+          "episode": 12,
+          "time": "16:45"
+        },
+        "remarks": null
+      },
+      {
+        "title": "Horimiya: The Missing Pieces",
+        "tag": [
+          "Spin-Off"
+        ],
+        "start": {
+          "episode": 10,
+          "time": "17:10"
+        },
+        "end": null,
+        "remarks": null
+      },
+      {
+        "title": "Horimiya",
+        "tag": [
+          "MAIN"
+        ],
+        "start": {
+          "episode": 11,
+          "time": "9:00"
+        },
+        "end": {
+          "episode": 11,
+          "time": "14:05"
+        },
+        "remarks": null
+      },
+      {
+        "title": "Horimiya: The Missing Pieces",
+        "tag": [
+          "Spin-Off"
+        ],
+        "start": {
+          "episode": 7,
+          "time": "15:10"
+        },
+        "end": null,
+        "remarks": null
+      },
+      {
+        "title": "Horimiya: The Missing Pieces",
+        "tag": [
+          "Spin-Off"
+        ],
+        "start": {
+          "episode": 12,
+          "time": "11:26"
+        },
+        "end": {
+          "episode": 12,
+          "time": "13:57"
+        },
+        "remarks": null
+      },
+      {
+        "title": "Horimiya: The Missing Pieces",
+        "tag": [
+          "Spin-Off"
+        ],
+        "start": {
+          "episode": 12,
+          "time": "17:57"
+        },
+        "end": null,
+        "remarks": null
+      },
+      {
+        "title": "Horimiya: The Missing Pieces",
+        "tag": [
+          "Spin-Off"
+        ],
+        "start": {
+          "episode": 9,
+          "time": "5:33"
+        },
+        "end": {
+          "episode": 9,
+          "time": "12:35"
+        },
+        "remarks": null
+      },
+      {
+        "title": "Horimiya: The Missing Pieces",
+        "tag": [
+          "Spin-Off"
+        ],
+        "start": {
+          "episode": 9,
+          "time": "12:36"
+        },
+        "end": {
+          "episode": 9,
+          "time": "16:41"
+        },
+        "remarks": null
+      },
+      {
+        "title": "Horimiya: The Missing Pieces",
+        "tag": [
+          "Spin-Off"
+        ],
+        "start": {
+          "episode": 9,
+          "time": "0:00"
+        },
+        "end": {
+          "episode": 9,
+          "time": "5:32"
+        },
+        "remarks": null
+      },
+      {
+        "title": "Horimiya: The Missing Pieces",
+        "tag": [
+          "Spin-Off"
+        ],
+        "start": {
+          "episode": 8,
+          "time": "17:52"
+        },
+        "end": null,
+        "remarks": null
+      },
+      {
+        "title": "Horimiya: The Missing Pieces",
+        "tag": [
+          "Spin-Off"
+        ],
+        "start": {
+          "episode": 7,
+          "time": "8:02"
+        },
+        "end": {
+          "episode": 7,
+          "time": "12:20"
+        },
+        "remarks": null
+      },
+      {
+        "title": "Horimiya: The Missing Pieces",
+        "tag": [
+          "Spin-Off"
+        ],
+        "start": {
+          "episode": 11,
+          "time": "0:00"
+        },
+        "end": {
+          "episode": 12,
+          "time": "6:08"
+        },
+        "remarks": null
+      },
+      {
+        "title": "Horimiya",
+        "tag": [
+          "MAIN"
+        ],
+        "start": {
+          "episode": 13,
+          "time": null
+        },
+        "end": null,
+        "remarks": null
+      },
+      {
+        "title": "Horimiya: The Missing Pieces",
+        "tag": [
+          "Spin-Off"
+        ],
+        "start": {
+          "episode": 13,
+          "time": "6:33"
+        },
+        "end": null,
+        "remarks": null
+      }
+    ],
+    "chronological": [],
+    "release": []
+  }
+}

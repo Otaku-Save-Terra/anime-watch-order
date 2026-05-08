@@ -122,22 +122,27 @@
     const end = entry.end?.episode;
     const startTime = entry.start?.time;
     const endTime = entry.end?.time;
+    const remarks = entry.remarks || '';
 
-    const parts = [];
-    if (start != null && end != null) {
-      parts.push(start === end ? `Episode ${start}` : `Episodes ${start} - ${end}`);
-    } else if (start != null) {
-      parts.push(`Episode ${start}`);
+    // Use remarks as fallback label if it contains the matching keyword
+    const fromLabel = startTime || (!startTime && /\bfrom\b/i.test(remarks) ? remarks : null);
+    const toLabel   = endTime   || (!endTime   && /\bto\b/i.test(remarks)   ? remarks : null);
+
+    const hasTimes = fromLabel || toLabel;
+
+    // Same episode or no end episode
+    if (end == null || start === end) {
+      if (start == null) return '';
+      if (!hasTimes) return `Episode ${start}`;
+      if (toLabel) return `Episode ${start} (${fromLabel || '_'} \u2192 ${toLabel})`;
+      return `Episode ${start} (${fromLabel} \u2192 end)`;
     }
 
-    if (startTime || endTime) {
-      const timePart = startTime && endTime
-        ? `${startTime} → ${endTime}`
-        : startTime || endTime;
-      parts.push(`(${timePart})`);
-    }
-
-    return parts.join(' ');
+    // Different episodes
+    if (!hasTimes) return `Episodes ${start} - ${end}`;
+    const startLabel = fromLabel ? `(${fromLabel})` : '(_)';
+    const endLabel   = toLabel   ? `(${toLabel})`   : '(end)';
+    return `Episode ${start} ${startLabel} \u2192 Episode ${end} ${endLabel}`;
   }
 
   const TAG_CLASS_MAP = {

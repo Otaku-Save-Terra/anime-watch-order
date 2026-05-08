@@ -2788,6 +2788,14 @@ button:focus-visible,
   text-align: center;
 }
 
+.tools-entry-table .col-idx {
+  width: 24px;
+  text-align: center;
+  color: var(--color-text-secondary, #999);
+  font-size: 0.75rem;
+  user-select: none;
+}
+
 .tools-entry-table .col-move {
   width: 28px;
   text-align: center;

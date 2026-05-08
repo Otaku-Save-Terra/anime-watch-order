@@ -85,9 +85,16 @@
   }
 
   /* ---------- order entry rows ---------- */
+  function refreshIndices(tbody) {
+    tbody.querySelectorAll('tr').forEach((tr, i) => {
+      tr.querySelector('.col-idx').textContent = i + 1;
+    });
+  }
+
   function createEntryRow() {
     const tr = document.createElement('tr');
     tr.innerHTML = `
+      <td class="col-idx">?</td>
       <td class="col-move" draggable="true"><span class="drag-handle" title="Drag to reorder">⠿</span></td>
       <td class="col-title"><input type="text" class="tools-input" data-field="title" placeholder="Title"></td>
       <td class="col-tag"></td>
@@ -107,6 +114,7 @@
   function addEntry(orderType) {
     const tbody = document.getElementById('entries-' + orderType);
     tbody.appendChild(createEntryRow());
+    refreshIndices(tbody);
   }
 
   function collectEntries(orderType) {
@@ -192,8 +200,10 @@
 
     document.addEventListener('dragend', () => {
       if (dragRow) {
+        const tbody = dragRow.parentNode;
         dragRow.classList.remove('drag-row--dragging');
         dragRow = null;
+        if (tbody) refreshIndices(tbody);
       }
     });
   }
@@ -295,7 +305,11 @@
       // Remove entry row (order table)
       if (target.dataset.removeEntry !== undefined) {
         const tr = target.closest('tr');
-        if (tr) tr.remove();
+        if (tr) {
+          const tbody = tr.parentNode;
+          tr.remove();
+          refreshIndices(tbody);
+        }
         return;
       }
 
@@ -453,6 +467,7 @@
       tr.querySelector('[data-field="remarks"]').value = entry.remarks || '';
       tbody.appendChild(tr);
     });
+    refreshIndices(tbody);
   }
 
   async function loadExisting(guid) {

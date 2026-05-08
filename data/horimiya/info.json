@@ -1,0 +1,35 @@
+{
+  "guid": "horimiya",
+  "title": {
+    "main": "Horimiya",
+    "alt": [
+      "ホリミヤ"
+    ]
+  },
+  "studio": [
+    "CloverWorks",
+    "Aniplex",
+    "Mainichi Broadcasting System",
+    "Square Enix",
+    "Movic",
+    "My Theater D.D.",
+    "Global Solutions",
+    "Mirai Koujou",
+    "Kanetsuu Investment"
+  ],
+  "description": "A secret life is the one thing they have in common. At school, Hori is a prim and perfect social butterfly, but the truth is she's a brash homebody. Meanwhile, under a gloomy facade, Miyamura hides a gentle heart, along with piercings and tattoos. In a chance meeting, they both reveal a side they've never shown. Could this blossom into something new? (Source: Funimation)",
+  "season": "WINTER",
+  "year": 2021,
+  "banner": "/images/horimiya-banner.jpg",
+  "thumbnail": "/images/horimiya.jpg",
+  "mal": "https://myanimelist.net/anime/42897/Horimiya",
+  "genre": [
+    "Comedy",
+    "Romance",
+    "Slice of Life"
+  ],
+  "status": "Completed",
+  "contributors": [
+    "u/iiStormBringer"
+  ]
+}
